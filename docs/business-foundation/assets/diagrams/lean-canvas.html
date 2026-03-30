@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lean Canvas - FinGuard AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .canvas-container {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        .canvas-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .canvas-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .canvas-header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .canvas-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 0;
+        }
+
+        .canvas-box {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            min-height: 200px;
+            background: white;
+        }
+
+        .canvas-box h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .canvas-box h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+            margin: 12px 0 8px 0;
+        }
+
+        .canvas-box p, .canvas-box ul {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .canvas-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .canvas-box ul li {
+            padding: 4px 0;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .canvas-box ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .box-problem { grid-column: 1; grid-row: 1; background: #fef5f5; }
+        .box-solution { grid-column: 2; grid-row: 1; background: #f5fef5; }
+        .box-uvp { grid-column: 3; grid-row: 1; background: #f5f5fe; }
+        .box-advantage { grid-column: 4; grid-row: 1; background: #fefef5; }
+        .box-segments { grid-column: 5; grid-row: 1; background: #f5fefe; }
+
+        .box-metrics { grid-column: 1 / 3; grid-row: 2; background: #fff9f5; }
+        .box-channels { grid-column: 3 / 6; grid-row: 2; background: #f9f5ff; }
+
+        .box-costs { grid-column: 1 / 3; grid-row: 3; background: #fff5f8; }
+        .box-revenue { grid-column: 3 / 6; grid-row: 3; background: #f5fff9; }
+
+        .highlight {
+            background: #fff9e6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #8b6914;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 15px;
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            border-top: 2px solid #667eea;
+        }
+
+        .footer strong {
+            color: #333;
+        }
+
+        .pricing-table {
+            margin: 8px 0;
+            font-size: 11px;
+        }
+
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas-container">
+        <div class="canvas-header">
+            <h1>LEAN CANVAS - FinGuard AI</h1>
+            <p>Platformă SaaS AI pentru Freelanceri Români</p>
+        </div>
+
+        <div class="canvas-grid">
+            <!-- Row 1 -->
+            <div class="canvas-box box-problem">
+                <h3>PROBLEM</h3>
+                <h4>Top 3 Probleme:</h4>
+                <ul>
+                    <li><strong>Timp pierdut</strong> - 8-12 ore/lună cu administrare financiară</li>
+                    <li><strong>Risc erori</strong> - Penalități fiscale, declarații greșite</li>
+                    <li><strong>Lipsa vizibilitate</strong> - Obligații fiscale, deadline-uri, tax planning</li>
+                </ul>
+                <h4>Alternative existente:</h4>
+                <ul>
+                    <li>Excel (manual, prone to errors)</li>
+                    <li>Contabil (scump 300+ RON/lună)</li>
+                    <li>SmartBill/Oblio (fără AI, reactive)</li>
+                </ul>
+            </div>
+
+            <div class="canvas-box box-solution">
+                <h3>SOLUTION</h3>
+                <p><strong>2 Agenți AI:</strong></p>
+
+                <h4>1. Expense Auditor</h4>
+                <ul>
+                    <li>OCR + Vision AI</li>
+                    <li>Clasificare automată</li>
+                    <li>Deduceri fiscale RO</li>
+                </ul>
+
+                <h4>2. Tax Advisor</h4>
+                <ul>
+                    <li>Analiză cash-flow</li>
+                    <li>Previziune taxe</li>
+                    <li>Optimizare fiscală</li>
+                    <li>Recomandări proactive</li>
+                </ul>
+
+                <h4>3. Integrare ANAF</h4>
+                <ul>
+                    <li>e-Factura automată</li>
+                    <li>SPV data sync</li>
+                </ul>
+            </div>
+
+            <div class="canvas-box box-uvp">
+                <h3>UNIQUE VALUE PROPOSITION</h3>
+                <p style="font-size: 16px; font-weight: 700; color: #667eea; margin-bottom: 15px;">
+                    "Finanțele tale, automate și optimizate"
+                </p>
+                <p>
+                    <strong>Management financiar complet automatizat</strong> pentru freelanceri români.
+                </p>
+                <p style="margin-top: 12px;">
+                    De la factură la declarație în <span class="highlight">&lt; 10 minute</span>
+                </p>
+                <p style="margin-top: 12px; font-weight: 600;">
+                    AI-first vs traditional accounting tools
+                </p>
+            </div>
+
+            <div class="canvas-box box-advantage">
+                <h3>UNFAIR ADVANTAGE</h3>
+                <ul>
+                    <li><strong>AI specialized</strong> pentru legislație RO</li>
+                    <li><strong>First-mover</strong> advantage 18-24 luni</li>
+                    <li><strong>Tech expertise</strong> AI/ML</li>
+                    <li><strong>Integrare ANAF</strong> profundă</li>
+                </ul>
+            </div>
+
+            <div class="canvas-box box-segments">
+                <h3>CUSTOMER SEGMENTS</h3>
+                <h4>Early Adopters:</h4>
+                <ul>
+                    <li>Freelanceri IT</li>
+                    <li>Consultanți</li>
+                    <li>Designeri</li>
+                    <li>Content creators</li>
+                </ul>
+                <h4>Target Market:</h4>
+                <ul>
+                    <li>PFA-uri (450k)</li>
+                    <li>SRL micro (120k)</li>
+                    <li>Mici antreprenori</li>
+                </ul>
+                <h4>Demographics:</h4>
+                <ul>
+                    <li>25-45 ani</li>
+                    <li>Venit &gt;3k RON/lună</li>
+                    <li>Urban (BUC, CJ, TM, IS)</li>
+                </ul>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="canvas-box box-metrics">
+                <h3>KEY METRICS</h3>
+                <ul>
+                    <li>Active users (MAU): Target growth</li>
+                    <li>Free → Paid conversion: <strong>40% target</strong></li>
+                    <li>MRR (Monthly Recurring Revenue)</li>
+                    <li>Churn rate: <strong>&lt;10%/lună</strong></li>
+                    <li>Documents processed/user: ~15/lună</li>
+                    <li>Tax saved/user: <strong>500-2.000 RON/an</strong></li>
+                </ul>
+                <h4>Economics:</h4>
+                <ul>
+                    <li>LTV: <span class="highlight">1.200-2.400 RON</span> (12-24 months)</li>
+                    <li>CAC: <span class="highlight">&lt;300 RON</span>/client</li>
+                    <li>LTV:CAC ratio: <span class="highlight">4-8:1</span> (healthy &gt;3:1)</li>
+                    <li>Gross margin: <span class="highlight">60-70%</span></li>
+                </ul>
+            </div>
+
+            <div class="canvas-box box-channels">
+                <h3>CHANNELS</h3>
+                <h4>Acquisition:</h4>
+                <ul>
+                    <li>Content marketing (SEO: "cum îmi fac PFA", "taxe RO")</li>
+                    <li>Social media (LinkedIn, FB groups freelanceri)</li>
+                    <li>Google Ads / FB Ads (targeting: "PFA România")</li>
+                    <li>Partnerships: Upwork, Fiverr, training platforms</li>
+                    <li>Referral program (invite = discount)</li>
+                    <li>Direct outreach comunități</li>
+                </ul>
+                <h4>Retention:</h4>
+                <ul>
+                    <li>Email nurturing (tips fiscale lunare)</li>
+                    <li>In-app education & onboarding</li>
+                </ul>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="canvas-box box-costs">
+                <h3>COST STRUCTURE</h3>
+                <h4>SCENARIUL ALES: BOOTSTRAPPED</h4>
+                <p><strong>Fixed Costs (lunar):</strong></p>
+                <ul>
+                    <li>Infrastructure + APIs: 2.300-7.000 RON</li>
+                    <li>Marketing & Ads: 1.000-3.000 RON</li>
+                    <li>Juridic & Admin: 500-1.000 RON</li>
+                    <li><strong>Salarii: 0 RON</strong> (6 founders pe EQUITY)</li>
+                </ul>
+                <p style="margin-top: 12px;">
+                    <strong>Total lunar:</strong> <span class="highlight">~4.000-12.000 RON</span> (media ~10k)
+                </p>
+                <p>
+                    <strong>Total An 1:</strong> <span class="highlight">~130.000 RON</span>
+                </p>
+
+                <h4 style="margin-top: 15px;">ALTERNATIV: Funded Scenario</h4>
+                <ul style="font-size: 10px;">
+                    <li>Infrastructure + APIs: 2.300-7.000 RON</li>
+                    <li>Salarii 6 membri: 37.000-40.000 RON</li>
+                    <li>Marketing: 2.000-5.000 RON</li>
+                    <li>Total lunar: ~45.000-55.000 RON</li>
+                    <li>Total An 1: ~550.000 RON</li>
+                </ul>
+            </div>
+
+            <div class="canvas-box box-revenue">
+                <h3>REVENUE STREAMS</h3>
+                <h4>1. SUBSCRIPTION MODEL (primary):</h4>
+                <div class="pricing-table">
+                    <div class="pricing-row">
+                        <span><strong>FREE TIER</strong></span>
+                        <span>0 RON/lună</span>
+                    </div>
+                    <div style="font-size: 10px; color: #777; padding-left: 10px; margin-bottom: 4px;">
+                        Trial 30 zile, 10 docs, basic reports
+                    </div>
+                    <div class="pricing-row">
+                        <span><strong>STARTER</strong></span>
+                        <span class="highlight">49 RON/lună</span>
+                    </div>
+                    <div class="pricing-row">
+                        <span><strong>PROFESSIONAL</strong></span>
+                        <span class="highlight">99 RON/lună</span>
+                    </div>
+                    <div class="pricing-row">
+                        <span><strong>BUSINESS</strong></span>
+                        <span class="highlight">199 RON/lună</span>
+                    </div>
+                </div>
+
+                <h4>2. FUTURE REVENUE (post-MVP):</h4>
+                <ul>
+                    <li>API access B2B (contabili, agenții)</li>
+                    <li>White-label pentru platforme</li>
+                    <li>Affiliate partnerships (bănci)</li>
+                    <li>Premium add-ons (banking, plăți)</li>
+                </ul>
+
+                <h4>PROIECȚIE AN 1 (conservativă):</h4>
+                <ul>
+                    <li>Luna 1-3: ~0-930 RON/lună (beta)</li>
+                    <li>Luna 4-6: ~1.700-5.200 RON/lună (early)</li>
+                    <li>Luna 7-12: ~9.000-45.800 RON/lună (scaling)</li>
+                </ul>
+                <p style="margin-top: 12px;">
+                    <strong>TOTAL VENITURI AN 1:</strong> <span class="highlight">~159.855 RON</span>
+                </p>
+                <p>
+                    <strong>KEY FINANCIALS:</strong>
+                </p>
+                <ul>
+                    <li>ROI An 1: <span class="highlight">23%</span> (bootstrapped)</li>
+                    <li>Break-even: <span class="highlight">Luna 9-10</span></li>
+                    <li>Payback period: 9-10 luni</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <strong>PRODUCT ↔ MARKET FIT</strong><br>
+            TAM: 570.000 (450k PFA + 120k SRL micro) | SAM: 300k | SOM Y1: 1.5-3k users
+        </div>
+    </div>
+</body>
+</html>

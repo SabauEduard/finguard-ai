@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOT Analysis - FinGuard AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .swot-container {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .swot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .swot-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .swot-header p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0;
+        }
+
+        .swot-box {
+            border: 1px solid #e0e0e0;
+            padding: 25px;
+            min-height: 350px;
+        }
+
+        .swot-box h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid;
+            display: inline-block;
+        }
+
+        .swot-box h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .swot-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .swot-box ul li {
+            padding: 6px 0;
+            position: relative;
+            padding-left: 20px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .swot-box ul li:before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .swot-box ul li strong {
+            color: #333;
+        }
+
+        .mitigation {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+            margin-top: 3px;
+            padding-left: 20px;
+        }
+
+        /* Strengths - Green */
+        .box-strengths {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .box-strengths h2 {
+            color: #16a34a;
+            border-color: #16a34a;
+        }
+        .box-strengths ul li:before {
+            color: #16a34a;
+        }
+
+        /* Weaknesses - Red */
+        .box-weaknesses {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+        }
+        .box-weaknesses h2 {
+            color: #dc2626;
+            border-color: #dc2626;
+        }
+        .box-weaknesses ul li:before {
+            color: #dc2626;
+        }
+
+        /* Opportunities - Blue */
+        .box-opportunities {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+        .box-opportunities h2 {
+            color: #2563eb;
+            border-color: #2563eb;
+        }
+        .box-opportunities ul li:before {
+            color: #2563eb;
+        }
+
+        /* Threats - Orange */
+        .box-threats {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+        }
+        .box-threats h2 {
+            color: #ea580c;
+            border-color: #ea580c;
+        }
+        .box-threats ul li:before {
+            color: #ea580c;
+        }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: #92400e;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+
+        .badge-top {
+            background: #fef3c7;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="swot-container">
+        <div class="swot-header">
+            <h1>ANALIZA SWOT - FinGuard AI</h1>
+            <p>Platformă SaaS AI pentru Freelanceri Români</p>
+        </div>
+
+        <div class="swot-grid">
+            <!-- Strengths -->
+            <div class="swot-box box-strengths">
+                <h2>STRENGTHS (Puncte Tari)</h2>
+
+                <h3>🏆 Top 3 Diferențiatori Majori:</h3>
+                <ul>
+                    <li>
+                        <strong>1. AI nativ</strong><span class="badge badge-top">TOP</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Singura soluție din România cu agenți AI nativi. Competiția (SmartBill, Oblio) oferă doar software tradițional fără capacități AI.</div>
+                    </li>
+                    <li>
+                        <strong>2. Integrare ANAF + AI predictive</strong><span class="badge badge-top">TOP</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Combinație unică: suport e-Factura (ca SmartBill/Oblio) PLUS predictive analytics. Soluțiile internaționale nu au integrare ANAF.</div>
+                    </li>
+                    <li>
+                        <strong>3. Price/value ratio optimizat RO</strong><span class="badge badge-top">TOP</span>
+                        <div style="margin-top: 4px; font-size: 12px;">49-199 RON/lună vs QuickBooks ($70-160 RON), FreshBooks ($90-280 RON), mai ieftin decât contabil (300-500 RON/lună).</div>
+                    </li>
+                </ul>
+
+                <h3>Alte puncte tari:</h3>
+                <ul>
+                    <li>OCR și clasificare automată cheltuieli cu AI pentru deduceri fiscale RO</li>
+                    <li>Specificitate legislație fiscală RO - OUG 89/2025, cote impozit, SPV</li>
+                    <li>Stack tehnologic modern 2026 (Claude 4.6, Next.js 15, PostgreSQL 16)</li>
+                    <li>Target de nișă foarte clar: freelanceri și PFA-uri RO (570k TAM)</li>
+                </ul>
+            </div>
+
+            <!-- Weaknesses -->
+            <div class="swot-box box-weaknesses">
+                <h2>WEAKNESSES (Puncte Slabe)</h2>
+
+                <h3>⚠️ Top 3 Riscuri Majore:</h3>
+                <ul>
+                    <li>
+                        <strong>1. Zero brand recognition</strong><span class="badge badge-top">RISC</span>
+                        <div style="margin-top: 4px; font-size: 12px;">SmartBill 15+ ani piață, Oblio 8+ ani, noi 0 utilizatori inițial.</div>
+                        <div class="mitigation">→ Mitigation: Beta closed cu 10-20 early adopters, testimoniale, freemium tier</div>
+                    </li>
+                    <li>
+                        <strong>2. Echipă startup (6 membri)</strong><span class="badge badge-top">RISC</span>
+                        <div style="margin-top: 4px; font-size: 12px;">SmartBill/Oblio au 20-50+ persoane, suport tehnic 24/7.</div>
+                        <div class="mitigation">→ Mitigation: Focus pe nișă tech-savvy (IT freelancers), community-driven support</div>
+                    </li>
+                    <li>
+                        <strong>3. Dependență critică API-uri AI externe</strong><span class="badge badge-top">RISC</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Claude API downtime = service down, costuri API variabile pot exploda.</div>
+                        <div class="mitigation">→ Mitigation: Multi-provider fallback (Claude + OpenAI), local LLM backup, caching</div>
+                    </li>
+                </ul>
+
+                <h3>Alte slăbiciuni:</h3>
+                <ul>
+                    <li>Lipsa network efecte inițiale (contabilii recomandă SmartBill/Oblio)</li>
+                    <li>MVP nu are invoicing nativ în v1 (amânat pentru v2)</li>
+                    <li>AI poate face greșeli în clasificare → liability risk</li>
+                    <li>Necesită educare utilizatori despre cum să folosească AI</li>
+                </ul>
+            </div>
+
+            <!-- Opportunities -->
+            <div class="swot-box box-opportunities">
+                <h2>OPPORTUNITIES (Oportunități)</h2>
+
+                <h3>🚀 Top 3 Quick Wins (Year 1):</h3>
+                <ul>
+                    <li>
+                        <strong>1. First mover advantage AI × ANAF</strong><span class="badge badge-top">WIN</span>
+                        <div style="margin-top: 4px; font-size: 12px;">18-24 luni până concurența reacționează. Fereastra de oportunitate pentru early adopters și construire moat.</div>
+                    </li>
+                    <li>
+                        <strong>2. Targeting IT freelancers cu venituri mari</strong><span class="badge badge-top">WIN</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Segment cu venit 3.500+ EUR/lună, dispuși să plătească tier premium (199 RON), tech-savvy.</div>
+                    </li>
+                    <li>
+                        <strong>3. Beta partnerships cu training platforms</strong><span class="badge badge-top">WIN</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Udemy, GoIT, Codecool promovează tool-ul la absolvenți care își deschid PFA.</div>
+                    </li>
+                </ul>
+
+                <h3>Alte oportunități:</h3>
+                <ul>
+                    <li><strong>Piață în expansiune:</strong> 570k TAM, creștere 7-10% anuală în servicii profesionale</li>
+                    <li><strong>Digitalizare ANAF:</strong> obligatorie 100% până 2028 → freelancerii TREBUIE tooluri digitale</li>
+                    <li><strong>Gap competitiv masiv:</strong> zero AI players în RO (SmartBill, Oblio = automation tradițională)</li>
+                    <li>Maturizarea IT RO: tranziție de la outsourcing la product development</li>
+                    <li>Trend contracte Equity/Success fee → necesită instrumente predictive</li>
+                    <li>Extindere regională: Polonia, Ungaria, Bulgaria (ecosisteme similare)</li>
+                </ul>
+            </div>
+
+            <!-- Threats -->
+            <div class="swot-box box-threats">
+                <h2>THREATS (Amenințări)</h2>
+
+                <h3>🔴 Top 3 Amenințări Critice:</h3>
+                <ul>
+                    <li>
+                        <strong>1. SmartBill pivot la AI</strong><span class="badge badge-top">CRITICAL</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Impact: CRITICAL, Prob: MEDIE - Lider cu capital, brand, bază utilizatori. Dacă pivotează la AI în 2026-2027, "first mover advantage" dispare.</div>
+                        <div class="mitigation">→ Mitigation: Speed to market esențial, monitorizare roadmap, construire moat prin community</div>
+                    </li>
+                    <li>
+                        <strong>2. Schimbări fiscale frecvente</strong><span class="badge badge-top">CRITICAL</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Impact: HIGH, Prob: VERY HIGH - OUG 89/2025, estimate 3-5 modificări majore/an în legislația RO.</div>
+                        <div class="mitigation">→ Mitigation: Team dedicat fiscal updates, buffer în pricing pentru maintenance</div>
+                    </li>
+                    <li>
+                        <strong>3. Adoptare lentă AI în finance</strong><span class="badge badge-top">CRITICAL</span>
+                        <div style="margin-top: 4px; font-size: 12px;">Impact: HIGH, Prob: MEDIE - Freelancerii pot prefera "control manual" vs "AI decision", teama de "black box".</div>
+                        <div class="mitigation">→ Mitigation: Educare agenți (free tier, case studies), "human in the loop" pentru decizii critice</div>
+                    </li>
+                </ul>
+
+                <h3>Alte amenințări:</h3>
+                <ul>
+                    <li>Oblio gratuit (<3 facturi/lună) captează începători</li>
+                    <li>QuickBooks/FreshBooks pot lansa RO localization (resurse masive)</li>
+                    <li>Costuri API Claude/OpenAI în creștere → margin compression</li>
+                    <li>EU AI Act compliance (2027): reglementări stricte "high-risk AI systems"</li>
+                    <li>Recesiune economică → reduceri PFA-uri (statistici 2026: radieri 4-10%)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
