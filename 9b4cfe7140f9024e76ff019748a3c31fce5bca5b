@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "mode": "full",
+  "commit_sha": "9b4cfe7140f9024e76ff019748a3c31fce5bca5b",
+  "author": "esabau@adobe.com",
+  "timestamp": "2026-03-30T13:47:35+03:00",
+  "detection": {
+    "ai_assisted": true,
+    "method": "editor_hook",
+    "tool": "claude",
+    "model": "",
+    "confidence": 1.0
+  },
+  "stats": {
+    "total_additions": 715,
+    "total_deletions": 0,
+    "ai_additions": 715,
+    "ai_deletions": 0,
+    "human_additions": 0,
+    "human_deletions": 0
+  },
+  "files": {
+    "README.md": {
+      "ai_additions": 414,
+      "human_additions": 0,
+      "ai_deletions": 0,
+      "human_deletions": 0,
+      "ai_lines": "1-414",
+      "human_lines": ""
+    },
+    "docs/business-foundation/README.md": {
+      "ai_additions": 301,
+      "human_additions": 0,
+      "ai_deletions": 0,
+      "human_deletions": 0,
+      "ai_lines": "1-301",
+      "human_lines": ""
+    }
+  }
+}
