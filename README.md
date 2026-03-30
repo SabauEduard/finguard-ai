@@ -15,11 +15,11 @@
 
 ### Problema
 
-Freelancerii români pierd **8-12 ore/lună** cu management financiar manual:
-- Categorisire cheltuieli (deductibile vs nedeductibile)
-- Calculare impozite și contribuții (CAS, CASS, impozit venit)
-- Urmărire deadline-uri fiscale ANAF
-- Raportare și conformitate legislație RO
+Freelancerii români pierd **8-12 ore/lună** cu managementul financiar manual:
+- Categorizarea cheltuielilor (deductibile vs nedeductibile)
+- Calcularea impozitelor și contribuțiilor (CAS, CASS, impozit venit)
+- Urmărirea termenelor-limită fiscale ANAF
+- Raportarea și conformitatea cu legislația RO
 
 **Impact financiar**: 5.000-10.000 RON/an în timp pierdut, penalități, și deduceri neoptimizate.
 
@@ -29,17 +29,17 @@ Freelancerii români pierd **8-12 ore/lună** cu management financiar manual:
 
 1. **Expense Auditor Agent**
    - OCR automat pentru facturi și bonuri (Claude Vision)
-   - Clasificare automată cheltuieli (deductibile/nedeductibile conform Cod Fiscal RO)
-   - Identificare oportunități deduceri fiscale
+   - Clasificarea automată a cheltuielilor (deductibile/nedeductibile conform Cod Fiscal RO)
+   - Identificarea oportunităților de deduceri fiscale
 
 2. **Tax Strategy Advisor Agent**
-   - Calcul automat impozite și contribuții (CAS 25%, CASS 10%, impozit venit 10%)
-   - Optimizare strategie fiscală (PFA vs SRL, distribuție dividende)
-   - Alerting proactiv pentru deadline-uri ANAF
+   - Calculul automat al impozitelor și contribuțiilor (CAS 25%, CASS 10%, impozit venit 10%)
+   - Optimizarea strategiei fiscale (PFA vs SRL, distribuirea dividendelor)
+   - Alertare proactivă pentru termenele-limită ANAF
 
 **Rezultate**:
-- ⏱️ Economie timp: 8-12h/lună → 10 min/lună (reducere **98%**)
-- 💰 Economii financiare: 500-2.000 RON/an optimizare + evitare penalități
+- ⏱️ Economie de timp: 8-12h/lună → 10 min/lună (reducere **98%**)
+- 💰 Economii financiare: 500-2.000 RON/an prin optimizare + evitarea penalităților
 - ✅ Conformitate 100% cu legislația RO (Cod Fiscal 2026, OUG 89/2025)
 
 ---
@@ -53,15 +53,15 @@ Freelancerii români pierd **8-12 ore/lună** cu management financiar manual:
 - ✅ **Qdrant Vector DB** pentru memorie context financiar
 
 ### Specializare România
-- ✅ **Cod Fiscal RO 2026** integrat în AI training
-- ✅ **ANAF API integration** (e-factura, SPV - Spațiul Privat Virtual)
+- ✅ **Cod Fiscal RO 2026** integrat în antrenamentul AI
+- ✅ **Integrare ANAF API** (e-Factură, SPV - Spațiul Privat Virtual)
 - ✅ **Legislație actualizată** automat (OUG, norme ANAF)
-- ✅ **Banking integration** (BT, ING, Revolut, Wise) pentru import automat tranzacții
+- ✅ **Integrare bancară** (BT, ING, Revolut, Wise) pentru importul automat al tranzacțiilor
 
 ### Proactiv vs Reactiv
-- ✅ **Alerting inteligent**: "În 14 zile deadline CAS, poți deduce încă 350 RON"
+- ✅ **Alertare inteligentă**: "În 14 zile e termenul-limită CAS, poți deduce încă 350 RON"
 - ✅ **Recomandări contextualizate**: "Cheltuială transport DEDUCTIBILĂ 100%, economie fiscală 7 RON"
-- ✅ **Predicție cash-flow**: Estimare venit + cheltuieli + impozite pe 3-6 luni
+- ✅ **Predicție cash-flow**: Estimarea veniturilor + cheltuieli + impozite pe 3-6 luni
 
 ---
 
@@ -98,10 +98,10 @@ Freelancerii români pierd **8-12 ore/lună** cu management financiar manual:
 
 ### Justificări Arhitecturale
 
-- **Railway vs AWS**: ~60% cost savings pentru MVP ($300-500/mo saved)
-- **Cloudflare R2 vs S3**: ~75% cheaper storage, zero egress fees ($100-200/mo saved)
-- **Claude 4.6**: Superior reasoning pentru context financiar/legal vs GPT-4
-- **FastAPI**: Performance (async native), developer experience, type safety
+- **Railway vs AWS**: ~60% reducere costuri pentru MVP (economie $300-500/lună)
+- **Cloudflare R2 vs S3**: ~75% mai ieftin la storage, fără costuri egress (economie $100-200/lună)
+- **Claude 4.6**: Reasoning superior pentru context financiar/legal vs GPT-4
+- **FastAPI**: Performanță (async nativ), experiență dezvoltator, type safety
 
 ---
 
@@ -132,11 +132,11 @@ Freelancerii români pierd **8-12 ore/lună** cu management financiar manual:
 | **LTV:CAC** | 4-8:1 |
 | **Gross Margin** | 60-70% |
 
-**Future revenue streams**:
-- API B2B (integrare contabili/platforme freelancing)
+**Fluxuri viitoare de venituri**:
+- API B2B (integrare cu contabili/platforme de freelancing)
 - White-label pentru bănci/fintech
-- Affiliate partnerships (banking, contabilitate)
-- Premium add-ons (audit support, multi-year reports)
+- Parteneriate afiliate (banking, contabilitate)
+- Add-ons premium (suport audit, rapoarte multi-an)
 
 ---
 
@@ -163,20 +163,20 @@ Freelancerii români pierd **8-12 ore/lună** cu management financiar manual:
 
 ### Diferențiatori FinGuard AI
 
-1. **AI-first nativ** vs automation (competiția = if-else rules, FinGuard = LLM reasoning)
-2. **ANAF + AI predictive** vs invoicing static
-3. **Proactiv** vs reactiv (alerting inteligent, recomandări contextualizate)
-4. **Specialized RO** vs generic international (Cod Fiscal 2026, OUG 89/2025)
-5. **First-mover advantage**: Zero competitori AI-native în RO (gap 18-24 luni)
+1. **AI-first nativi** vs automatizare (competiția = reguli if-else, FinGuard = raționament LLM)
+2. **ANAF + AI predictiv** vs facturare statică
+3. **Proactiv** vs reactiv (alertare inteligentă, recomandări contextualizate)
+4. **Specializat RO** vs generic internațional (Cod Fiscal 2026, OUG 89/2025)
+5. **Avantaj first-mover**: Zero competitori AI-nativi în RO (gap 18-24 luni)
 
 ---
 
 ## 📅 Roadmap
 
 ### M0: Research & Setup (2 săptămâni)
-- ✅ Market research competitori
-- ✅ Tech stack finalizare
-- ✅ Business Foundation document
+- ✅ Cercetare piață și competitori
+- ✅ Finalizarea stack-ului tehnologic
+- ✅ Documentul Business Foundation
 
 ### M1: MVP Backend (4 săptămâni)
 - [ ] FastAPI core + auth (Clerk)
@@ -221,16 +221,16 @@ Freelancerii români pierd **8-12 ore/lună** cu management financiar manual:
 
 | Membru | Rol | Responsabilități |
 |--------|-----|------------------|
-| **Sabău Eduard** | Tech Lead & Backend | Arhitectură sistem, FastAPI, ANAF API integration |
-| **Maftei Valentin** | Backend Engineer | Banking sync, Database schema, API development |
-| **Liciu Ștefan** | AI Engineer | Claude integration, AI agents, Qdrant vector DB |
-| **Sandu Eduard** | Frontend Engineer | Next.js, React, UI/UX, Onboarding flow |
-| **Clem Daria** | Product Manager | User research, Feature prioritization, Roadmap |
-| **Nițoi Antonio** | Marketing & Growth | Content marketing, Social media, Community building |
+| **Sabău Eduard** | Tech Lead & Backend | Arhitectură sistem, FastAPI, ANAF API integration, coordonare echipă |
+| **Maftei Valentin** | Backend Engineer | Banking sync, Database schema, API development, integrări |
+| **Liciu Ștefan** | AI/ML Engineer | Claude integration, AI agents, Qdrant vector DB, prompt engineering |
+| **Sandu Eduard** | Frontend Engineer | Next.js, React, UI/UX, Onboarding flow, mobile (Flutter) |
+| **Clem Daria** | Product & Strategy | Roadmap, cercetare utilizatori, prioritizare features, UX |
+| **Nițoi Antonio** | Growth & Community | Content tehnic (blog, docs), community building, developer relations |
 
-**Model compensație**: Equity-only bootstrapped (6 founders, vesting 4 ani cu 1 an cliff)
+**Model de compensație**: Doar equity în faza bootstrapped (6 fondatori, vesting 4 ani cu 1 an cliff)
 
-**Tranziție salarii**: După break-even + 3-6 luni cash buffer (estimat luna 12-15)
+**Tranziția la salarii**: După break-even + 3-6 luni rezervă cash (estimat luna 12-15)
 
 ---
 
@@ -364,12 +364,12 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
 Acest proiect este dezvoltat ca parte a cursului MPA (Mobile & Pervasive Applications) la Universitatea București.
 
 **Echipa de dezvoltare**:
-- Sabău Eduard (Tech Lead)
+- Sabău Eduard (Tech Lead & Backend)
 - Maftei Valentin (Backend)
-- Liciu Ștefan (AI)
+- Liciu Ștefan (AI/ML)
 - Sandu Eduard (Frontend)
-- Clem Daria (Product)
-- Nițoi Antonio (Marketing)
+- Clem Daria (Product & Strategy)
+- Nițoi Antonio (Growth & Community)
 
 Pentru contribuții externe (după Public Launch):
 1. Fork repository

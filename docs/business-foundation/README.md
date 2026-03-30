@@ -114,24 +114,24 @@ business-foundation/
 - Exemple: Modificări legislative, Dependență Claude API, Competiție SmartBill
 
 **Secțiunea 7: Planificare**
-- Echipa: 6 founders cu roluri detaliate (Tech Lead, Backend, AI Engineer, Frontend, Product Manager, Marketing)
-- Model compensație: Equity-only bootstrapped (justificat)
-- Diagrama Gantt: 19 săptămâni (Aprilie-August 2026), 7 milestones (M0-M6)
+- Echipa: 6 fondatori cu roluri detaliate (Tech Lead, Backend, AI/ML Engineer, Frontend, Product & Strategy, Growth & Community)
+- Model de compensație: Doar equity în faza bootstrapped (justificat)
+- Diagrama Gantt: 19 săptămâni (Aprilie-August 2026), 7 jaloane (M0-M6)
 - Timeline vizual PNG (1.2 MB)
 
 **Secțiunea 8: Costuri**
 - Costuri inițiale: 10.000 RON (înființare SRL, design, legal, website, infrastructure)
-- Costuri lunare bootstrapped: 4.000-12.000 RON/lună (media ~10k)
-- Costuri lunare funded: 45.000-55.000 RON/lună (cu salarii)
-- Total An 1 bootstrapped: **130.000 RON** (vs 550k funded)
-- Optimizări identificate: Railway vs AWS (save $300-500/mo), R2 vs S3 (save $100-200/mo)
+- Costuri lunare bootstrapped: 4.000-12.000 RON/lună (medie ~10k)
+- Costuri lunare cu finanțare: 45.000-55.000 RON/lună (cu salarii)
+- Total An 1 bootstrapped: **130.000 RON** (vs 550k cu finanțare)
+- Optimizări identificate: Railway vs AWS (economie $300-500/lună), R2 vs S3 (economie $100-200/lună)
 
 **Secțiunea 9: Model de Business**
 - Subscription SaaS: 4 tiers (Free/49/99/199 RON/lună)
 - Target per tier specificat
-- Features per tier detaliate
-- Proiecții venituri An 1: **159.855 RON** (conservator)
-- Future revenue streams: API B2B, white-label, affiliate, premium add-ons
+- Funcționalități per tier detaliate
+- Proiecții venituri An 1: **159.855 RON** (estimare conservatoare)
+- Fluxuri viitoare de venituri: API B2B, white-label, parteneriate afiliate, add-ons premium
 
 **Secțiunea 10: Analiză Cost-Beneficiu**
 - ROI An 1: **23%** (calculat: (159.855 - 130.000) / 130.000 × 100%)
@@ -159,11 +159,11 @@ business-foundation/
 - ✅ **Tabel sumar complet**: 20 utilizări AI în total (mapare tool → secțiune → utilitate)
 
 **Statistici finale:**
-- Total utilizări AI: 17 prompts majore
+- Total utilizări AI: 17 prompturi majore
 - Total output: ~50+ pagini documentație
 - Artefacte generate: 8 fișiere (PNG, HTML, LaTeX, verificare cerințe)
-- Cost savings identificate: ~60% reducere costuri infrastructure prin AI-assisted choices
-- Efficiency gains: Document complet în **~8 ore** vs **~30-40 ore** manual tradițional
+- Economii de costuri identificate: ~60% reducere costuri infrastructură prin alegeri asistate de AI
+- Câștiguri de eficiență: Document complet în **~8 ore** vs **~30-40 ore** lucru manual tradițional
 
 ---
 
@@ -200,10 +200,10 @@ business-foundation/
 - **logo.svg** - Vector scalabil pentru print
 
 ### Diagrame
-1. **gantt.png** (1.2 MB) - Project roadmap Gantt chart
-   - 19 săptămâni timeline (Aprilie-August 2026)
-   - 7 milestones (M0: Research → M6: Public Launch)
-   - Dependencies și critical path vizualizate
+1. **gantt.png** (1.2 MB) - Diagramă Gantt roadmap proiect
+   - Cronologie 19 săptămâni (Aprilie-August 2026)
+   - 7 jaloane (M0: Research → M6: Public Launch)
+   - Dependențe și traseu critic vizualizate
 
 2. **lean-canvas.png** (352 KB, 1400×1644px) - Lean Canvas vizual
    - Grid layout 5×3 cu toate 9 secțiuni Canvas
@@ -224,13 +224,13 @@ business-foundation/
 **Folder: scripts/**
 
 ### screenshot_fullpage.py (Recomandat)
-Script Python pentru conversie HTML → PNG cu smart cropping automat.
+Script Python pentru conversie HTML → PNG cu tăiere inteligentă automată.
 
-**Features:**
-- Metoda 1: Selenium (calcul înălțime automată)
-- Metoda 2: Chrome headless fallback (fixed height 5000px)
-- Smart cropping algorithm (detectare automată first/last content row)
-- Auto-preview după generare
+**Caracteristici:**
+- Metoda 1: Selenium (calculul automat al înălțimii)
+- Metoda 2: Chrome headless fallback (înălțime fixă 5000px)
+- Algoritm inteligent de tăiere (detectare automată primul/ultimul rând de conținut)
+- Preview automat după generare
 
 **Utilizare:**
 ```bash
@@ -251,23 +251,23 @@ Wrapper Bash simplu pentru Chrome headless (necesită crop manual).
 ## 📊 Highlight Features
 
 ### Conținut Îmbogățit
-- ✅ **Impact financiar concret**: 5.000-10.000 RON/an cost al problemei pentru freelanceri
+- ✅ **Impact financiar concret**: 5.000-10.000 RON/an costul problemei pentru freelanceri
 - ✅ **3 Cazuri de utilizare reale**: Andrei (IT), Maria (Consultant), Alexandru (Designer)
-- ✅ **Beneficii măsurabile**: Economii timp 98%, ROI utilizatori 300-500%
-- ✅ **Diferențiatori clari**: AI-first vs automation, specializare RO, proactiv vs reactiv
-- ✅ **"De ce acum? 2026"**: Context market timing (maturizare AI, digitalizare ANAF, gap competitiv)
+- ✅ **Beneficii măsurabile**: Economii de timp 98%, ROI utilizatori 300-500%
+- ✅ **Diferențiatori clari**: AI-first vs automatizare, specializare RO, proactiv vs reactiv
+- ✅ **"De ce acum? 2026"**: Context moment de piață (maturizare AI, digitalizare ANAF, decalaj competitiv)
 
 ### Formatare Profesională
-- ✅ **LaTeX native**: Font serif 11pt, margini 2.5cm consistente
-- ✅ **Vizualizări color-coded**: Lean Canvas și SWOT ca imagini PNG profesionale
-- ✅ **Tabele optimizate**: Split în 2 tabele pentru features comparison (evită overflow)
-- ✅ **Cuprins navigabil**: Hyperlinks către toate secțiunile
+- ✅ **LaTeX nativ**: Font serif 11pt, margini 2.5cm consistente
+- ✅ **Vizualizări cu coduri de culoare**: Lean Canvas și SWOT ca imagini PNG profesionale
+- ✅ **Tabele optimizate**: Împărțire în 2 tabele pentru compararea funcționalităților (evită overflow)
+- ✅ **Cuprins navigabil**: Hyperlink-uri către toate secțiunile
 
 ### AI Usage Transparent
 - ✅ **17 prompturi documentate**: Input + Context + Output per utilizare
-- ✅ **Colored boxes LaTeX**: Prompturi în albastru, outputs în verde
+- ✅ **Casete colorate LaTeX**: Prompturi în albastru, output-uri în verde
 - ✅ **Tabel sumar complet**: 20 utilizări AI mapate per secțiune document
-- ✅ **Metrici efficiency**: 8h vs 30-40h manual, 60% cost savings identificate
+- ✅ **Metrici de eficiență**: 8h vs 30-40h manual, 60% economii de costuri identificate
 
 ---
 
