@@ -11,6 +11,7 @@
     "jest.config.ts"
   ],
   "compilerOptions": {
+    "incremental": false,
     "strictNullChecks": true
   }
 }
