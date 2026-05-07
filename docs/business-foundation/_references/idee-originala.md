@@ -17,6 +17,7 @@ Un instrument care ajută micii antreprenori să își gestioneze veniturile și
 Scanează facturile și chitanțele încărcate, clasificându-le automat pe categorii de deduceri fiscale.
 
 **Funcționalități:**
+
 - Scanare facturi și chitanțe
 - Clasificare automată
 - Categorii de deduceri fiscale
@@ -29,6 +30,7 @@ Scanează facturile și chitanțele încărcate, clasificându-le automat pe cat
 Analizează fluxul de numerar și oferă previziuni privind taxele datorate la final de trimestru, sugerând optimizări.
 
 **Funcționalități:**
+
 - Analiză cash-flow
 - Previziuni taxe trimestriale
 - Sugestii de optimizare fiscală
@@ -39,6 +41,7 @@ Analizează fluxul de numerar și oferă previziuni privind taxele datorate la f
 ## Business Foundation
 
 Ideal pentru o analiză de risc axată pe:
+
 - Modificările legislative
 - Model de monetizare de tip abonament lunar
 

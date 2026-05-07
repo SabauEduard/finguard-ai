@@ -5,14 +5,17 @@ Acest folder conține toate diagramele și asset-urile vizuale folosite în docu
 ## Fișiere
 
 ### 1. Lean Canvas
+
 - **lean-canvas.png** (352 KB, 1400x1644px) - Imagine finală folosită în PDF
 - **lean-canvas.html** (14 KB) - Sursă HTML pentru preview/editare
 
 ### 2. SWOT Analysis
+
 - **swot-analysis.png** (609 KB, 1200x1417px) - Imagine finală folosită în PDF
 - **swot-analysis.html** (13 KB) - Sursă HTML pentru preview/editare
 
 ### 3. Gantt Chart
+
 - **gantt.png** (1.2 MB) - Diagramă Gantt project roadmap (19 săptămâni, M0-M6)
 
 ## Cum să regenerezi imaginile
@@ -66,14 +69,17 @@ python3 scripts/screenshot_fullpage.py assets/diagrams/swot-analysis.html assets
 ## Note tehnice
 
 **Dimensiuni recomandate:**
+
 - Lean Canvas: width 1400px (height auto, ~1600-1700px)
 - SWOT Analysis: width 1200px (height auto, ~1400-1500px)
 
 **Cropping:**
+
 - Top threshold: 245 (detectează header colorat)
 - Bottom threshold: 240 (detectează footer/ultimul content)
 
 **Culori folosite:**
+
 - Lean Canvas: Gradient violet (#667eea → #764ba2)
 - SWOT: Verde (#16a34a), Roșu (#dc2626), Albastru (#2563eb), Portocaliu (#ea580c)
 

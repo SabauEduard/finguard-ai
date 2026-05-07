@@ -9,9 +9,11 @@ Acest folder conține materialele originale pentru proiect: idea inițială, cer
 ## [DOC] Fișiere
 
 ### [`idee-originala.txt`](./idee-originala.txt)
+
 **Idea originală a proiectului**
 
 Conține:
+
 - Numele proiectului: FinGuard AI
 - Descriere scurtă
 - Cei 2 agenți AI: Expense Auditor & Tax Strategy Advisor
@@ -22,9 +24,11 @@ Conține:
 ---
 
 ### [`cerinte-profesor.txt`](./cerinte-profesor.txt)
+
 **Cerințele oficiale pentru Business Foundation**
 
 Conține:
+
 - Structura documentului cerută
 - Secțiunile obligatorii:
   - Nume + logo (optional)
@@ -41,13 +45,16 @@ Conține:
 ---
 
 ### [`exemple-studenti/`](./exemple-studenti/)
+
 **Exemple Business Foundation din anii anteriori**
 
 Conține:
+
 - `spontaneous-traveler.pdf` - Platformă travel/turism
 - `rentzi.pdf` - Platformă închirieri proprietăți
 
 **Ce să observi**:
+
 - Structura documentului
 - Depth of analysis (SWOT, competitori)
 - Gantt chart style
@@ -55,6 +62,7 @@ Conține:
 - Secțiunea costuri/venituri
 
 **[!] ATENȚIE**:
+
 - NU copia direct (plagiarism)
 - Unele părți pot fi "imperfecte" (vezi cerinte-profesor)
 - Anii trecuți aveau cerințe PUȚIN diferite
@@ -62,6 +70,7 @@ Conține:
 - Nu toate au AI tools documentation (acum e cerință!)
 
 **Cum să folosești exemplele**:
+
 - [OK] Inspirație pentru structură
 - [OK] Vezi cum arată un Gantt bine făcut
 - [OK] Depth of analysis ca benchmark
@@ -74,21 +83,25 @@ Conține:
 ## [TIP] Tips Folosire References
 
 ### Când lucrezi la SWOT:
+
 1. Citește exemplele → vezi depth
 2. Brainstorm-ează propriul SWOT
 3. Compară depth-ul → ai acoperit suficient?
 
 ### Când lucrezi la Market Analysis:
+
 1. Vezi ce competitori au analizat ei
 2. Fa research-ul TĂU propriu (cu AI tools!)
 3. Asigură-te că ai matrice funcționalități (au ei, trebuie să ai și tu)
 
 ### Când creezi Gantt:
+
 1. Vezi exemplele lor ca stil
 2. Creează-ți propriul cu task-urile tale
 3. Asigură-te că e lizibil și detaliat
 
 ### Când estimezi costuri:
+
 1. **NU folosi prețurile lor!** (sunt din 2023-2024)
 2. Vezi CAtegORIILE de costuri (asta e OK să urmezi)
 3. Research prețurile 2026 (API AI, cloud, etc.)
@@ -117,13 +130,13 @@ Conține:
 
 ## [CHART] Comparație Rapidă
 
-| Aspect | Exemplele Lor | Proiectul Tău |
-|--------|---------------|---------------|
-| **An** | 2023-2024 | 2026 |
-| **Costuri** | Azure 2023, salarii 2023 | Claude API 2026, AWS 2026, salarii 2026 |
-| **Tehnologii** | Stack-uri 2023 | AI-first: Claude 4.6, GPT-4o, modern stack |
-| **AI Documentation** | Lipsă | CERINȚĂ (trebuie să ai!) |
-| **Context** | Post-pandemic early | AI mainstream, mature market |
+| Aspect               | Exemplele Lor            | Proiectul Tău                              |
+| -------------------- | ------------------------ | ------------------------------------------ |
+| **An**               | 2023-2024                | 2026                                       |
+| **Costuri**          | Azure 2023, salarii 2023 | Claude API 2026, AWS 2026, salarii 2026    |
+| **Tehnologii**       | Stack-uri 2023           | AI-first: Claude 4.6, GPT-4o, modern stack |
+| **AI Documentation** | Lipsă                    | CERINȚĂ (trebuie să ai!)                   |
+| **Context**          | Post-pandemic early      | AI mainstream, mature market               |
 
 ---
 
