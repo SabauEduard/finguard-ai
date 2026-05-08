@@ -104,12 +104,12 @@ business-foundation/
 
 **Secțiunea 5: Tehnologii Folosite**
 
-- Backend: Python 3.12, FastAPI, Celery, SQLAlchemy
+- Backend: TypeScript 6, NestJS 11, TypeORM, PostgreSQL 16
 - AI Stack: Claude 4.6 API (Sonnet/Opus/Haiku), GPT-4o fallback, Claude Vision, Qdrant
 - Database: PostgreSQL 16, Redis 7, Qdrant vector DB
 - Storage: Cloudflare R2
-- Frontend: Next.js 15, React 19, TypeScript 5.4, Tailwind CSS 4
-- Hosting: Railway (backend), Vercel (frontend)
+- Frontend: Next.js 16, React 19, TypeScript 6, Tailwind CSS 4, shadcn/ui
+- Hosting: Railway (backend), Vercel (frontend), Clerk pentru auth
 - Justificări detaliate pentru fiecare alegere
 - Tabel costuri estimate: 2.300-7.000 RON/lună MVP
 

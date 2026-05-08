@@ -506,13 +506,13 @@ Format: Markdown structurat pentru copy-paste.
 
 **Limbaje & Frameworks**:
 
-- ✅ **Python 3.12** pentru AI/ML components
-  - **FastAPI 0.110+** pentru REST APIs (modern, rapid, auto-documentation)
-  - **Celery** cu Redis pentru task queues async (OCR processing, rapoarte)
-  - **SQLAlchemy 2.0** pentru ORM + Alembic pentru migrations
-  - **Pydantic v2** pentru validation și data schemas
+- ✅ **TypeScript 6** pentru backend și frontend
+  - **NestJS 11** pentru REST APIs (modular, DI, convenții clare)
+  - **TypeORM** pentru ORM și maparea entităților către PostgreSQL
+  - **Jest** pentru testare și **ESLint** pentru validare statică
+  - **pnpm workspaces + Turborepo** pentru orchestrarea monorepo-ului
 
-**Justificare**: Python = standard pentru AI/ML, FastAPI = performance + developer experience, mature ecosystem
+**Justificare**: TypeScript end-to-end reduce context switching, NestJS oferă structură matură pentru API, iar Turborepo simplifică dezvoltarea într-un repo cu aplicații și pachete partajate.
 
 **AI/ML Stack**:
 
@@ -540,17 +540,16 @@ Format: Markdown structurat pentru copy-paste.
 **Database**:
 
 - ✅ **PostgreSQL 16** (primary database)
-  - Extensions: pgvector pentru embeddings, pg_cron pentru scheduled tasks
-  - Managed service: **Supabase** (generous free tier, apoi $25/mo) sau **Neon** (serverless PostgreSQL)
+  - ORM: **TypeORM** pentru entități și migrări
+  - Managed service: PostgreSQL managed pentru MVP
 
-- ✅ **Redis 7** pentru caching și Celery queue
-  - Managed: **Upstash** Redis (free tier 10k commands/day, apoi pay-per-use)
+- ✅ **Redis 7** pentru caching și job orchestration
+  - Managed: Upstash sau provider similar pentru MVP
 
 - ✅ **Qdrant** (vector database) pentru embeddings legislație fiscală
-  - Self-hosted initial (Docker), apoi Qdrant Cloud ($25/mo)
-  - **WHY Qdrant**: Open-source, Rust-based (fast), filter capabilities superioare Pinecone
+  - Self-hosted inițial sau cloud managed în funcție de cost
 
-**Justificare**: PostgreSQL = mature, reliable, pgvector evită separate vector DB cost. Qdrant = cost-effective vs Pinecone ($70/mo).
+**Justificare**: PostgreSQL + TypeORM acoperă nevoile backend-ului, iar Redis + Qdrant rămân utile pentru workload-urile AI și de context.
 
 **Storage**:
 
@@ -565,23 +564,21 @@ Format: Markdown structurat pentru copy-paste.
 
 #### Frontend
 
-- ✅ **Next.js 15** (App Router) cu React 19
+- ✅ **Next.js 16** (App Router) cu React 19
   - **Turbopack** pentru dev speed
   - **Server Components** pentru performance
-  - **TypeScript 5.4** strict mode
+  - **TypeScript 6** strict mode
   - **Tailwind CSS 4** pentru styling (utility-first, rapid iteration)
   - **shadcn/ui** pentru component library (copy-paste, customizable)
 
 - ✅ **Vercel** pentru hosting frontend
-  - Free tier: 100GB bandwidth/mo, serverless functions
-  - Auto-scaling, global CDN
-  - **Alternative**: Cloudflare Pages (unlimited bandwidth, mai ieftin la scale)
+  - Free tier OK pentru MVP, apoi scaling managed
 
 - ⏳ **Flutter** pentru mobile app (v2.0+)
   - **WHY Flutter**: Single codebase iOS + Android
   - **WHY v2.0**: MVP = web-first, mobile later
 
-**Justificare**: Next.js 15 = industry standard pentru SaaS, React Server Components = performance boost, Vercel = zero-config deployment.
+**Justificare**: Next.js 16 rămâne baza aplicației web, iar Tailwind + shadcn/ui accelerează dezvoltarea UI-ului pentru MVP.
 
 ---
 
@@ -590,9 +587,8 @@ Format: Markdown structurat pentru copy-paste.
 **Cloud Provider**:
 
 - ✅ **Railway** (PRIMARY pentru MVP)
-  - Backend Python + PostgreSQL + Redis într-un singur provider
-  - $5/mo developer plan, apoi $20/mo pro
-  - **WHY Railway**: Simplitate vs AWS complexity, Heroku-like DX, cost predictibil
+  - Hosting simplificat pentru backend și servicii suport
+  - **WHY Railway**: Simplitate vs AWS complexity, cost predictibil
 
 - ✅ **AWS** (LONG-TERM pentru scale)
   - Tranziție post-PMF (Product-Market Fit) când traffic justifică
@@ -619,7 +615,7 @@ Format: Markdown structurat pentru copy-paste.
 - ✅ **Better Stack** (ex Logtail) pentru logging
   - $10/mo pentru 1GB logs, retention 7 zile
 
-**Justificare**: Railway = optimal pentru bootstrapped MVP (cost + simplicity). AWS tranziție când avem cashflow. Sentry + PostHog = standard modern, better pricing ca DataDog/NewRelic.
+**Justificare**: Railway rămâne o opțiune bună pentru MVP bootstrapped, iar AWS rămâne direcția de scale.
 
 ---
 
@@ -627,10 +623,7 @@ Format: Markdown structurat pentru copy-paste.
 
 - ✅ **Clerk** pentru autentificare
   - OAuth 2.0, MFA, social login built-in
-  - Free: 10k MAU, apoi $25/mo pentru 10k MAU
-  - **Alternative**: Supabase Auth (inclus cu DB)
-
-- ✅ **JWT** pentru session management (dacă nu Clerk)
+  - Free tier OK pentru MVP
 
 - ✅ **GDPR Compliance**:
   - **Osano** pentru cookie consent (free tier OK)
@@ -642,7 +635,7 @@ Format: Markdown structurat pentru copy-paste.
   - **AES-256** pentru data at rest
   - Secrets management: **Doppler** sau **Infisical** (open-source)
 
-**Justificare**: Clerk = auth done right out-of-the-box, reduce dev time. GDPR = table stakes pentru EU SaaS.
+**Justificare**: Clerk reduce timpul de implementare pentru auth, iar cerințele de conformitate rămân valide.
 
 ---
 
@@ -696,15 +689,14 @@ Format: Markdown structurat pentru copy-paste.
 | - Claude API (Sonnet primary)    |              ~700-1500 | $150-300/mo, variabil cu usage       |
 | - OpenAI GPT-4o (fallback)       |               ~200-500 | $50-100/mo backup                    |
 | **Infrastructure**               |                        |                                      |
-| - Railway (Backend + DB + Redis) |               ~100-450 | $20-90/mo scaling tiers              |
-| - Vercel (Frontend)              |              **0-200** | Free tier OK pentru MVP, apoi $20/mo |
-| - Cloudflare R2 (Storage)        |                ~50-150 | $10-30/mo documente utilizatori      |
+| - Railway + Vercel               |               ~100-650 | Deploy MVP pentru API și web         |
+| - Cloudflare R2                  |                ~50-150 | Storage documente                    |
 | - Qdrant (Vector DB)             |                   ~125 | $25/mo cloud sau self-hosted free    |
 | **Monitoring & Security**        |                        |                                      |
 | - Sentry (Error tracking)        |                   ~130 | $26/mo                               |
 | - PostHog (Analytics)            |               **0-50** | Self-hosted free sau $10/mo cloud    |
 | - Better Stack (Logging)         |                    ~50 | $10/mo                               |
-| - Clerk (Auth)                   |              **0-125** | Free tier OK, apoi $25/mo            |
+| - Clerk (Auth)                   |              **0-125** | Free tier OK, apoi scaling           |
 | **Development Tools**            |                        |                                      |
 | - Claude Code (3 devs)           |                   ~450 | 3 × $30/dev                          |
 | - VS Code                        |                  **0** | Free + extensions                    |
@@ -722,14 +714,14 @@ Format: Markdown structurat pentru copy-paste.
 
 **Optimizări bootstrapped**:
 
-- ✅ Free tiers: Vercel, Clerk, PostHog self-hosted, Figma (până la hire)
-- ✅ Railway în loc de AWS: saving ~$300-500/mo (simplicity + cost)
-- ✅ Cloudflare R2 în loc de S3: saving ~$100-200/mo (no egress fees)
+- ✅ Free tiers: tooling și analytics unde există planuri gratuite reale
+- ✅ Providerii managed sunt amânați până la cerințe clare de deploy și auth
+- ✅ Serviciile auxiliare rămân opționale până când sunt necesare în MVP
 - ✅ Claude Vision vs separate OCR: saving ~$200/mo (integrated)
 
 **Când cresc costurile**:
 
-- 500+ utilizatori → Railway scaling sau migrare AWS
+- 500+ utilizatori → scaling pe providerul de hosting ales sau migrare spre infrastructură dedicată
 - 1000+ utilizatori → Claude API poate ajunge la $500-1000/mo
 - Plan mitigation: Caching agresiv + local LLM pentru queries simple
 
@@ -1139,7 +1131,7 @@ ROI ≈ 23%
 - Cost Structure: Bootstrapped (4-12k/lună) vs Funded (45-55k/lună) - clar separate
 - Salarii: Explicație detaliată equity-only vs salarii în scenarii
 - TAM/SAM/SOM: 570k TAM, 300k SAM, 1.5-3k SOM An 1
-- Tech stack costs: Actualizat cu Railway + Cloudflare R2 (~60% cost reduction)
+- Tech stack costs: actualizat pentru un stack TypeScript/NestJS/Next.js cu provideri managed încă nefixați
 - Break-even: Luna 9-10 (improved from 10-11)
 - ROI An 1: 23% (improved from 10%)
 

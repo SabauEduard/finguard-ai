@@ -248,19 +248,19 @@ La tehnologii, putem folosi orice tehnologie, deci sugereaza le pe cele care par
 ### [EXPORT] Output Generat
 
 - Stack Tehnologic finalizat în `structure-and-sections.md` Secțiunea 6:
-  - **Backend**: Python 3.12 + FastAPI 0.110 + Celery + SQLAlchemy 2.0
+  - **Backend**: TypeScript 6 + NestJS 11 + TypeORM + PostgreSQL 16
   - **AI Stack**: Claude 4.6 API (Sonnet primary, Opus complex, Haiku fast) + Claude Vision pentru OCR + OpenAI GPT-4o fallback
-  - **Database**: PostgreSQL 16 (Supabase/Neon managed) + Redis 7 (Upstash) + Qdrant vector DB
-  - **Storage**: Cloudflare R2 (zero egress fees, ~75% cheaper than S3)
-  - **Frontend**: Next.js 15 (App Router) + React 19 + TypeScript 5.4 + Tailwind CSS 4 + shadcn/ui
-  - **Hosting**: Railway pentru MVP backend (simplitate + cost predictibil) + Vercel pentru frontend
+  - **Database**: PostgreSQL 16 + Redis 7 + Qdrant vector DB
+  - **Storage**: Cloudflare R2
+  - **Frontend**: Next.js 16 (App Router) + React 19 + TypeScript 6 + Tailwind CSS 4 + shadcn/ui
+  - **Hosting**: Railway pentru MVP backend + Vercel pentru frontend
   - **CI/CD**: GitHub Actions + Docker
   - **Monitoring**: Sentry + PostHog + Better Stack
   - **Auth**: Clerk (OAuth 2.0, MFA built-in)
   - **Payments**: Stripe + Netopia Payments (RO cards)
 - Justificări detaliate pentru fiecare alegere (cost-eficiență, maturitate, AI-first)
 - Tabel costuri actualizat: **~2.300-4.000 RON/lună** pentru MVP (lean), **~4.500-7.000 RON/lună** la growth
-- Optimizări bootstrapped: Free tiers (Vercel, Clerk, PostHog), Railway vs AWS (saving $300-500/mo), R2 vs S3 (saving $100-200/mo)
+- Optimizări bootstrapped: shared tooling prin pnpm + Turborepo, provideri managed amânați până la validarea MVP, Claude Vision vs OCR separat
 
 ---
 
@@ -735,7 +735,7 @@ Poti face logoul mai mare pe prima pagina
 **Total output pages**: ~50+ pagini documentație (BUSINESS_FOUNDATION.pdf 15 pagini + ai-usage-log 17+ pagini)
 **Artefacte generate**: 10+ fișiere (lean-canvas, swot-analysis, gantt, BUSINESS_FOUNDATION.tex, VERIFICARE_CERINTE.md, scripts/, README-uri actualizate)
 **Corectări finale**: 58+ erori gramaticale, 7 inconsistențe prețuri/expresii, roluri echipă realiste, logo optimizat
-**Cost savings identificate**: ~60% reducere costuri infrastructure prin AI-assisted tech choices (Railway vs AWS, R2 vs S3)
+**Cost savings identificate**: reducere a overhead-ului operațional prin monorepo pnpm + Turborepo și amânarea serviciilor managed până la validarea MVP
 **Efficiency gains**: Document Business Foundation complet în ~8-10 ore vs ~30-40 ore manual tradițional (incluzând iterații formatare LaTeX, generare vizualizări, verificare cerințe, multiple runde de corectare)
 
 ---

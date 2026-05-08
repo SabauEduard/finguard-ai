@@ -327,17 +327,17 @@ deci sugereaza le pe cele care par cele mai adecvate
 \begin{tcolorbox}[colback=outputbackground,colframe=green!75!black,title=Output Generat]
 Stack Tehnologic finalizat:
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Backend}: Python 3.12 + FastAPI 0.110 + Celery + SQLAlchemy 2.0
+    \item \textbf{Backend}: TypeScript 6 + NestJS 11 + TypeORM + PostgreSQL 16
     \item \textbf{AI Stack}: Claude 4.6 API (Sonnet/Opus/Haiku) + Claude Vision + GPT-4o fallback
     \item \textbf{Database}: PostgreSQL 16 + Redis 7 + Qdrant vector DB
-    \item \textbf{Storage}: Cloudflare R2 (75\% cheaper than S3)
-    \item \textbf{Frontend}: Next.js 15 + React 19 + TypeScript 5.4 + Tailwind CSS 4
+    \item \textbf{Storage}: Cloudflare R2
+    \item \textbf{Frontend}: Next.js 16 + React 19 + TypeScript 6 + Tailwind CSS 4 + shadcn/ui
     \item \textbf{Hosting}: Railway (backend) + Vercel (frontend)
 \end{itemize}
 
 Justificări detaliate + tabel costuri: \textbf{2.300-4.000 RON/lună} pentru MVP.
 
-Optimizări: Railway vs AWS (saving \$300-500/mo), R2 vs S3 (saving \$100-200/mo).
+Optimizări: monorepo pnpm + Turborepo, provideri managed amânați până la validarea MVP.
 \end{tcolorbox}
 
 %----------------------------------------
@@ -739,8 +739,8 @@ Claude Code & Project Structure & Folder organization & Separare scripts/ (tooli
     \end{itemize}
     \item \textbf{Economii de costuri identificate}: ~60\% reducere costuri infrastructură prin alegeri tehnologice asistate de AI
     \begin{itemize}
-        \item Railway vs AWS: saving \$300-500/mo
-        \item Cloudflare R2 vs S3: saving \$100-200/mo
+        \item Shared tooling prin pnpm + Turborepo
+        \item Amânarea serviciilor managed până la cerințe reale de MVP
     \end{itemize}
     \item \textbf{Câștiguri de eficiență}: Document Business Foundation complet în \textbf{~8 ore} vs \textbf{~30-40 ore} manual tradițional
     \begin{itemize}

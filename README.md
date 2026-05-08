@@ -76,9 +76,9 @@ Freelancerii români pierd **8-12 ore/lună** cu managementul financiar manual:
 
 **Backend**
 
-- Python 3.12 + FastAPI 0.110
-- Celery + Redis pentru task queue
-- SQLAlchemy 2.0 + PostgreSQL 16
+- TypeScript 6 + NestJS 11
+- TypeORM + PostgreSQL 16
+- Jest + ESLint pentru testare si validare
 
 **AI Layer**
 
@@ -89,29 +89,33 @@ Freelancerii români pierd **8-12 ore/lună** cu managementul financiar manual:
 
 **Frontend**
 
-- Next.js 15 (App Router)
-- React 19 + TypeScript 5.4
+- Next.js 16 (App Router)
+- React 19 + TypeScript 6
 - Tailwind CSS 4 + shadcn/ui
 
-**Infrastructure**
+**Workspace & Tooling**
+
+- pnpm workspaces + Turborepo
+- Shared packages pentru UI, ESLint si TypeScript config
+- Monorepo orchestration pentru build, lint si test
+
+**Infrastructure, Auth & Payments**
 
 - Railway (backend MVP)
 - Vercel (frontend)
 - Cloudflare R2 (storage, zero egress fees)
-- PostgreSQL 16 (Supabase/Neon managed)
-- Redis 7 (Upstash)
-
-**Auth & Payments**
-
+- PostgreSQL 16 (managed)
 - Clerk (OAuth 2.0, MFA)
 - Stripe + Netopia Payments (RO cards)
 
 ### Justificări Arhitecturale
 
+- **Turborepo**: unifica build-urile, testele si configuratiile comune pentru toate aplicatiile din repo
 - **Railway vs AWS**: ~60% reducere costuri pentru MVP (economie $300-500/lună)
 - **Cloudflare R2 vs S3**: ~75% mai ieftin la storage, fără costuri egress (economie $100-200/lună)
 - **Claude 4.6**: Reasoning superior pentru context financiar/legal vs GPT-4
-- **FastAPI**: Performanță (async nativ), experiență dezvoltator, type safety
+- **NestJS**: arhitectura modulara, DI matur si integrare buna cu ecosistemul TypeScript
+- **TypeORM**: mapare naturala intre entitati si PostgreSQL pentru backend-ul NestJS
 
 ---
 
@@ -194,7 +198,7 @@ Freelancerii români pierd **8-12 ore/lună** cu managementul financiar manual:
 
 ### M1: MVP Backend (4 săptămâni)
 
-- [ ] FastAPI core + auth (Clerk)
+- [ ] NestJS core + strat de persistenta
 - [ ] PostgreSQL schema + migrations
 - [ ] Banking sync API (Revolut, Wise)
 - [ ] **ANAF API integration** (critical path)
@@ -208,7 +212,7 @@ Freelancerii români pierd **8-12 ore/lună** cu managementul financiar manual:
 
 ### M3: MVP Frontend (3 săptămâni)
 
-- [ ] Next.js 15 setup + auth flow
+- [ ] Next.js 16 setup + app shell
 - [ ] Dashboard principal + expense list
 - [ ] Tax calculator UI
 - [ ] Onboarding flow
@@ -241,10 +245,10 @@ Freelancerii români pierd **8-12 ore/lună** cu managementul financiar manual:
 
 | Membru              | Rol                 | Responsabilități                                                     |
 | ------------------- | ------------------- | -------------------------------------------------------------------- |
-| **Sabău Eduard**    | Tech Lead & Backend | Arhitectură sistem, FastAPI, ANAF API integration, coordonare echipă |
+| **Sabău Eduard**    | Tech Lead & Backend | Arhitectură sistem, NestJS API, ANAF API integration, coordonare echipă |
 | **Maftei Valentin** | Backend Engineer    | Banking sync, Database schema, API development, integrări            |
 | **Liciu Ștefan**    | AI/ML Engineer      | Claude integration, AI agents, Qdrant vector DB, prompt engineering  |
-| **Sandu Eduard**    | Frontend Engineer   | Next.js, React, UI/UX, Onboarding flow, mobile (Flutter)             |
+| **Sandu Eduard**    | Frontend Engineer   | Next.js, React, UI/UX, app shell si fluxuri principale web           |
 | **Clem Daria**      | Product & Strategy  | Roadmap, cercetare utilizatori, prioritizare features, UX            |
 | **Nițoi Antonio**   | Growth & Community  | Content tehnic (blog, docs), community building, developer relations |
 
@@ -310,14 +314,9 @@ Freelancerii români pierd **8-12 ore/lună** cu managementul financiar manual:
 ### Prerequisites
 
 ```bash
-# Backend
-python 3.12+
+node 24+
+pnpm 10.33+
 postgresql 16
-redis 7
-
-# Frontend
-node 20+
-npm/pnpm/yarn
 
 # AI
 Claude API key (Anthropic)
@@ -331,49 +330,24 @@ OpenAI API key (fallback)
 git clone https://github.com/your-username/finguard-ai.git
 cd finguard-ai
 
-# Backend setup
-cd backend
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-cp .env.example .env  # Configure API keys
-
-# Frontend setup
-cd ../frontend
+# Install workspace dependencies
 pnpm install
-cp .env.example .env.local  # Configure endpoints
 
-# Database setup
-cd ../backend
-alembic upgrade head
-
-# Run development servers
-# Terminal 1 - Backend
-uvicorn app.main:app --reload
-
-# Terminal 2 - Frontend
-cd ../frontend
+# Run all apps in development
 pnpm dev
+
+# Or run apps individually
+pnpm --filter api dev
+pnpm --filter web dev
+
+# Validation
+pnpm test
+pnpm lint
 ```
 
 ### Environment Variables
 
-**Backend (.env)**:
-
-```bash
-DATABASE_URL=postgresql://user:pass@localhost:5432/finguard
-REDIS_URL=redis://localhost:6379
-ANTHROPIC_API_KEY=sk-ant-...
-OPENAI_API_KEY=sk-...
-CLERK_SECRET_KEY=sk_...
-```
-
-**Frontend (.env.local)**:
-
-```bash
-NEXT_PUBLIC_API_URL=http://localhost:8000
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
-```
+Template-urile de mediu pentru integrarea bazei de date, AI si autentificare nu sunt inca versionate in repo. Documentatia va fi completata dupa stabilizarea configuratiei MVP.
 
 ---
 
@@ -381,7 +355,7 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
 
 - **Business Foundation**: [`docs/business-foundation/`](./docs/business-foundation/) - Document complet MPA (15 pg + 17 pg AI log)
 - **Architecture**: `docs/architecture/` - System design, ERD, API specs (TBD)
-- **API Docs**: `docs/api/` - FastAPI auto-generated docs + Postman collection (TBD)
+- **API Docs**: `docs/api/` - Documentatie REST pentru API-ul NestJS + Postman collection pentru testare (TBD)
 - **User Guide**: `docs/user-guide/` - Ghid utilizare platformă (TBD)
 
 ---

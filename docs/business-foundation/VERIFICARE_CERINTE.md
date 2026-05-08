@@ -54,9 +54,9 @@
 
 #### 4.3 ✅ Tehnologii Folosite
 
-- **Limbaje:** ✅ Python 3.12, TypeScript 5.4
+- **Limbaje:** ✅ TypeScript 6 pentru aplicație, Python doar pentru tooling-ul de generare assets din documentație
 - **Framework-uri AI:** ✅ Claude 4.6 API (Sonnet/Opus/Haiku), GPT-4o fallback, Claude Vision, Qdrant
-- **Alte tehnologii:** ✅ FastAPI, Next.js 15, PostgreSQL 16, Redis 7, Railway, Vercel, Cloudflare R2
+- **Alte tehnologii:** ✅ NestJS 11, TypeORM, Next.js 16, React 19, Tailwind CSS 4, shadcn/ui, PostgreSQL 16, Redis 7, Railway, Vercel, Cloudflare R2, Clerk
 - **Lungime:** ✅ ~1 pagină + tabel costuri estimate
 - **Justificări:** ✅ Pentru fiecare alegere tehnologică
 
