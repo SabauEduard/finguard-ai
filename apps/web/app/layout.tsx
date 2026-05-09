@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from 'next';
 import { Geist } from "next/font/google";
 import localFont from 'next/font/local';
@@ -26,9 +27,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn("font-sans", geist.variable)}
+    >
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
