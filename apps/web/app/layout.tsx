@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import { cn } from "@/lib/utils";
 import type { Metadata } from 'next';
 import { Geist } from "next/font/google";
 import localFont from 'next/font/local';
