@@ -11,41 +11,41 @@
 
 ```
 
-   PROBLEM               SOLUTION             UNIQUE VALUE          UNFAIR                 CUSTOMER           
-                                              PROPOSITION           ADVANTAGE              SEGMENTS           
-                                            
- Top 3 Problems:       FinGuard AI oferă     "Finanțele tale,      - AI specialized pt   Early Adopters:      
-                       platformă SaaS cu 2    automate și            legislație RO                            
- 1. Timp pierdut cu    agenți AI:              optimizate"         - First-mover în      - Freelanceri IT     
-    administrarea                                                    segment RO          - Consultanți        
-    financiară         1. Expense Auditor    Management financiar  - Tech expertise      - Designeri          
-    (8-12h/lună)          (OCR + clasifi-    complet automatizat     AI/ML               - Content creators   
-                          care automată)     pentru freelanceri    - Integrare ANAF                           
- 2. Risc erori fiscale                       români                  profundă            Target Customers:    
-    și penalități      2. Tax Advisor                                                                         
-                          (analiză cash-     De la factură la                            - PFA-uri active     
- 3. Lipsa vizibilității    flow + optimizare declarație - zero                          - SRL micro          
-    asupra obligațiilor    fiscală)          efort manual                                - Mici antreprenori  
-    fiscale                                                                                                   
-                       3. Integrare ANAF     AI-first vs                                 Demographics:        
- Existing                 (e-Factura, SPV)   traditional                                                      
- Alternatives:                               accounting software                         - 25-45 ani          
- - Excel sheets        AI-driven automation                                              - Venit >3000 RON/lună
- - Angajare contabil   vs manual tracking                                                - Urban (București,  
- - Smartbill/Oblio                                                                         Cluj, Timișoara)   
-   (fără AI)                                                                                                  
+   PROBLEM               SOLUTION             UNIQUE VALUE          UNFAIR                 CUSTOMER
+                                              PROPOSITION           ADVANTAGE              SEGMENTS
 
-   KEY METRICS                                  CHANNELS                                                         
-                                                                                                                 
+ Top 3 Problems:       FinGuard AI oferă     "Finanțele tale,      - AI specialized pt   Early Adopters:
+                       platformă SaaS cu 2    automate și            legislație RO
+ 1. Timp pierdut cu    agenți AI:              optimizate"         - First-mover în      - Freelanceri IT
+    administrarea                                                    segment RO          - Consultanți
+    financiară         1. Expense Auditor    Management financiar  - Tech expertise      - Designeri
+    (8-12h/lună)          (OCR + clasifi-    complet automatizat     AI/ML               - Content creators
+                          care automată)     pentru freelanceri    - Integrare ANAF
+ 2. Risc erori fiscale                       români                  profundă            Target Customers:
+    și penalități      2. Tax Advisor
+                          (analiză cash-     De la factură la                            - PFA-uri active
+ 3. Lipsa vizibilității    flow + optimizare declarație - zero                          - SRL micro
+    asupra obligațiilor    fiscală)          efort manual                                - Mici antreprenori
+    fiscale
+                       3. Integrare ANAF     AI-first vs                                 Demographics:
+ Existing                 (e-Factura, SPV)   traditional
+ Alternatives:                               accounting software                         - 25-45 ani
+ - Excel sheets        AI-driven automation                                              - Venit >3000 RON/lună
+ - Angajare contabil   vs manual tracking                                                - Urban (București,
+ - Smartbill/Oblio                                                                         Cluj, Timișoara)
+   (fără AI)
+
+   KEY METRICS                                  CHANNELS
+
  - Active users (total + paying)              - Content marketing (blog SEO: "cum îmi fac PFA", "taxe freelancer")
- - Free → Paid conversion rate (target 40%)   - Social media (LinkedIn, Facebook groups freelanceri RO)         
- - MRR (Monthly Recurring Revenue)            - Freelancer communities & forumuri (ex: softpedia, reddit.ro)   
- - Churn rate (target <10%)                   - Partnerships: Upwork, Fiverr, platforme freelancing locale     
- - NPS (Net Promoter Score)                   - Google Ads / Facebook Ads (targeting: "PFA", "freelancer RO")  
- - Avg documents processed/user               - Referral program (invite = discount)                           
- - Avg tax saved/user (RON)                   - Direct outreach către comunități freelanceri                    
- - LTV (Lifetime Value): 1.200-2.400 RON                                                                        
- - CAC (Customer Acquisition): target <300 RON                                                                  
+ - Free → Paid conversion rate (target 40%)   - Social media (LinkedIn, Facebook groups freelanceri RO)
+ - MRR (Monthly Recurring Revenue)            - Freelancer communities & forumuri (ex: softpedia, reddit.ro)
+ - Churn rate (target <10%)                   - Partnerships: Upwork, Fiverr, platforme freelancing locale
+ - NPS (Net Promoter Score)                   - Google Ads / Facebook Ads (targeting: "PFA", "freelancer RO")
+ - Avg documents processed/user               - Referral program (invite = discount)
+ - Avg tax saved/user (RON)                   - Direct outreach către comunități freelanceri
+ - LTV (Lifetime Value): 1.200-2.400 RON
+ - CAC (Customer Acquisition): target <300 RON
 
    COST STRUCTURE                               REVENUE STREAMS
 
@@ -69,7 +69,7 @@
  - Juridic: 500-1.000 RON                  Total venituri An 1: ~159.855 RON
  Total lunar: ~45.000-55.000 RON           ROI An 1 (bootstrapped): ~23%
  Total An 1: ~550.000 RON                  Break-even (bootstrapped): Luna 9-10
-                                           LTV: 1.200-2.400 RON | CAC: <300 RON                  
+                                           LTV: 1.200-2.400 RON | CAC: <300 RON
 
                               PRODUCT ←→ MARKET
 ```
@@ -85,6 +85,7 @@ Freelancerii și micii antreprenori români petrec 8-12 ore pe lună cu manageme
 ### Solution
 
 FinGuard AI automatizează complet procesul prin 2 agenți AI specializați:
+
 1. **Expense Auditor**: Scanează și clasifică automat orice factură/chitanță
 2. **Tax Advisor**: Analizează cash-flow-ul și oferă recomandări de optimizare fiscală
 
@@ -106,6 +107,7 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 ### Customer Segments
 
 **Market Size (2026)**:
+
 - **TAM** (Total Addressable Market): 570.000 potențiali utilizatori
   - 450.000 PFA-uri active în România
   - 120.000 SRL micro deținute de freelanceri
@@ -115,12 +117,14 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
   - 0.5-1% penetrare SAM în primul an
 
 **Early Adopters** (primii 6-12 luni):
+
 - Freelanceri IT, consultanți, designeri, content creators
 - Tech-savvy, confortabili cu AI
 - Venit >3.000 RON/lună
 - 25-45 ani, urban (București, Cluj, Timișoara, Iași)
 
 **Target Customers** (scaling):
+
 - PFA-uri active (toate domeniile: IT, marketing, legal, creative)
 - SRL micro (1-5 angajați)
 - Mici antreprenori cu client portfolio diversificat
@@ -128,12 +132,14 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 ### Channels
 
 **Acquisition**:
+
 - Content marketing (SEO: "cum îmi optimizez taxele ca PFA")
 - Social media (LinkedIn, Facebook groups)
 - Google/FB Ads (targeting: "PFA România", "freelancer fiscal")
 - Partnerships: Upwork, Fiverr, platforme locale
 
 **Retention**:
+
 - Email nurturing (tips fiscale lunare)
 - In-app education
 - Referral program
@@ -141,10 +147,12 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 ### Revenue Streams
 
 **Primary**: Abonament SaaS (49-199 RON/lună)
+
 - Free tier pentru lead gen
 - Conversion rate target: 40% după trial
 
 **Future**:
+
 - B2B API access
 - White-label pentru platforme
 - Affiliate cu bănci/servicii
@@ -156,6 +164,7 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 **Scenariul Ales: BOOTSTRAPPED**
 
 **Fixed Costs**: ~4.000-12.000 RON/lună
+
 - Infrastructure + AI APIs (Claude, OpenAI): 2.300-7.000 RON
 - Marketing & Ads: 1.000-3.000 RON
 - Juridic & Admin: 500-1.000 RON
@@ -164,6 +173,7 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 **Total An 1 (bootstrapped)**: ~130.000 RON
 
 **Alternativ - Funded Scenario** (pentru comparație):
+
 - Infrastructure + APIs: 2.300-7.000 RON
 - Salarii 6 membri: 37.000-40.000 RON/lună
   - CTO/Tech Lead: ~15.000 RON
@@ -175,6 +185,7 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 - **Total An 1 (funded)**: ~550.000 RON
 
 **Variable Costs**: Scaling cu utilizatori
+
 - AI API calls per document processed
 - Storage (Cloudflare R2: ~0.1 RON/GB)
 - Support (crește cu volumul)
@@ -210,6 +221,7 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 **Echipa**: 6 membri founders
 **Compensație**: **Equity vesting only**, fără salarii în primele 12-18 luni
 **Justificare**:
+
 - Reduce burn rate la ~4.000-12.000 RON/lună (vs ~45.000+ cu salarii)
 - Permite profitabilitate în luna 9-10 în loc de luna 24+
 - Founders își asumă riscul pentru ownership mai mare
@@ -220,6 +232,7 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 
 **Dacă primim seed funding**: ~500.000-1.000.000 RON
 **Compensație**: Salarii competitive + equity mai mic
+
 - CTO/Tech Lead: ~15.000 RON/lună (~180k/an)
 - Backend/AI Dev: ~12.000 RON/lună (~144k/an)
 - Frontend Dev: ~10.000 RON/lună (~120k/an)
@@ -232,26 +245,30 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 ## Strategic Priorities (Next 12 months)
 
 ### Q1 (Months 1-3): Build & Validate
+
 - [OK] MVP development (2 AI agents + web app)
 - [OK] Closed beta (10-20 freelanceri early adopters)
 - [OK] Validate product-market fit
 - [OK] Iterate based on feedback
 
 ### Q2 (Months 4-6): Launch & Learn
+
 - [START] Public launch v1.0
 - [CHART] Aggressive content marketing (SEO)
 - [CHAT] Community building (groups, forums)
 - [TARGET] Target: 100 paying users
 
 ### Q3 (Months 7-9): Scale
--  Paid ads (Google, FB)
+
+- Paid ads (Google, FB)
 - 🤝 Partnerships cu platforme freelancing
--  Mobile app development starts
+- Mobile app development starts
 - [TARGET] Target: 300 paying users
 
 ### Q4 (Months 10-12): Expand
--  Expand features (banking integration, payments)
--  B2B offering (API pentru contabili)
+
+- Expand features (banking integration, payments)
+- B2B offering (API pentru contabili)
 - [COST] Seed funding? (dacă traction e bună)
 - [TARGET] Target: 500+ paying users, profitability
 
@@ -259,12 +276,12 @@ Primul și singurul asistent AI financial specializat pentru legislația fiscal�
 
 ## Risk Mitigation
 
-| Top Risk | Mitigation Strategy |
-|----------|---------------------|
-| **Adoptare lentă** | Free trial 30 zile, onboarding ghidat, early adopter discounts |
+| Top Risk                  | Mitigation Strategy                                                               |
+| ------------------------- | --------------------------------------------------------------------------------- |
+| **Adoptare lentă**        | Free trial 30 zile, onboarding ghidat, early adopter discounts                    |
 | **Schimbări legislative** | Monitoring ANAF, actualizare rapidă knowledge base, parteneriat consultant fiscal |
-| **Costuri AI mari** | Deploy LLM local pentru task-uri simple, caching, optimizare prompts |
-| **Concurență agresivă** | Focus nișă (freelanceri RO), inovație continuă, community strong |
+| **Costuri AI mari**       | Deploy LLM local pentru task-uri simple, caching, optimizare prompts              |
+| **Concurență agresivă**   | Focus nișă (freelanceri RO), inovație continuă, community strong                  |
 
 ---
 

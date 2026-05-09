@@ -9,6 +9,7 @@ Acest folder conține toate documentele de lucru (draft, TODO-uri, planning) pen
 ## [FOLDER] Documente în Acest Folder
 
 ### 1. [`structure-and-sections.md`](./structure-and-sections.md)
+
 **CEL MAI IMPORTANT DOCUMENT PENTRU LUCRU**
 
 - Structură COMPLETĂ a tuturor secțiunilor
@@ -22,6 +23,7 @@ Acest folder conține toate documentele de lucru (draft, TODO-uri, planning) pen
 ---
 
 ### 2. [`tasks-checklist.md`](./tasks-checklist.md)
+
 **Lista task-urilor prioritizate**
 
 - Task-uri organizate: HIGH → MEDIUM → LOW priority
@@ -35,6 +37,7 @@ Acest folder conține toate documentele de lucru (draft, TODO-uri, planning) pen
 ---
 
 ### 3. [`ai-usage-log.md`](./ai-usage-log.md)
+
 **Documentare AI tools (CERINȚĂ PROFESOR!)**
 
 - Template pentru documentarea fiecărui tool AI folosit
@@ -51,40 +54,51 @@ Acest folder conține toate documentele de lucru (draft, TODO-uri, planning) pen
 ### Step-by-Step Workflow
 
 #### 1⃣ **Citește acest README** (5 min)
+
 Înțelege structura și ce conține fiecare document.
 
 #### 2⃣ **Deschide [`tasks-checklist.md`](./tasks-checklist.md)** (5 min)
+
 Vezi lista completă de task-uri și alege primul:
+
 - Defininițiunea echipei (15 min)
 - Research competitori (45 min)
 - etc.
 
 #### 3⃣ **Lucrează în [`structure-and-sections.md`](./structure-and-sections.md)**
+
 Pentru fiecare task:
+
 - Găsește secțiunea relevantă (ex: "8.1 Echipa")
 - Caută **"[USER] COMPLETEAZĂ TU"**
 - Completează informațiile
 - Folosește prompturile AI sugestate dacă e cazul
 
 #### 4⃣ **Documentează AI în [`ai-usage-log.md`](./ai-usage-log.md)**
+
 După FIECARE utilizare tool AI:
+
 - Copiază template-ul din doc
 - Fill in: tool, model, prompt (exact!), output, utilitate
 - Salvează
 
 #### 5⃣ **Salvează assets în [`../assets/`](../assets/)**
+
 - Logo → `assets/logo/`
 - Gantt → `assets/diagrams/`
 - Mockups → `assets/mockups/`
 
 #### 6⃣ **Compilează în [`../BUSINESS_FOUNDATION.md`](../BUSINESS_FOUNDATION.md)**
+
 Când ai terminat toate task-urile:
+
 - Deschide documentul final
 - Copy-paste secțiunile completate din `structure-and-sections.md`
 - Adaugă imagini/diagrame din `assets/`
 - Include secțiunea AI usage din `ai-usage-log.md`
 
 #### 7⃣ **Export PDF și Predă!**
+
 - Formatare finală în Word/Google Docs dacă e nevoie
 - Export PDF
 - Submit!
@@ -96,6 +110,7 @@ Când ai terminat toate task-urile:
 ### Cum să Tracking-uiești Progresul
 
 În [`tasks-checklist.md`](./tasks-checklist.md), marchează task-urile completate:
+
 ```markdown
 - [x] Task completat
 - [ ] Task pending
@@ -118,33 +133,37 @@ Când ai terminat toate task-urile:
 
 ### [X] DON'Ts
 
-1. [X] Nu ignora documentarea AI (profesorul verifică explicit!)
-2. [X] Nu lăsa tot pe ultima zi (6h efectiv, nu în 1 zi)
-3. [X] Nu te baza 100% pe AI fără validare (hallucinations exist)
-4. [X] Nu plagi din exemplele anterioare (Rentzi, Spontaneous)
-5. [X] Nu inventa date/statistici (citează surse reale)
-6. [X] Nu uita să export assets (logo, gantt) în folder-ul corect
+1. [x] Nu ignora documentarea AI (profesorul verifică explicit!)
+2. [x] Nu lăsa tot pe ultima zi (6h efectiv, nu în 1 zi)
+3. [x] Nu te baza 100% pe AI fără validare (hallucinations exist)
+4. [x] Nu plagi din exemplele anterioare (Rentzi, Spontaneous)
+5. [x] Nu inventa date/statistici (citează surse reale)
+6. [x] Nu uita să export assets (logo, gantt) în folder-ul corect
 
 ---
 
-##  AI Tools - Quick Reference
+## AI Tools - Quick Reference
 
 ### Pentru Research
+
 - **ChatGPT** (GPT-4o): General queries, market research
 - **Claude.ai**: Long-form analysis, SWOT brainstorming
 - **Perplexity**: Web-grounded facts, statistics (cu citări)
 
 ### Pentru Design
+
 - **Midjourney**: Logo design (best quality, $10/lună)
 - **DALL-E 3**: Logo alternative (inclus în ChatGPT Plus)
 - **Canva AI**: Quick logo gen (free tier OK)
 
 ### Pentru Planning
+
 - **ChatGPT/Claude**: Gantt chart în Mermaid syntax
 - **GanttProject**: Desktop app (free, easy)
 - **Figma**: Dacă știi să folosești
 
 ### Pentru Document
+
 - **Google Docs**: Colaborare + auto-save
 - **Word**: Dacă preferi desktop
 - **Notion**: Dacă vrei să organizezi modular
@@ -154,11 +173,13 @@ Când ai terminat toate task-urile:
 ## [BOOKS] Resurse Suplimentare
 
 ### În Acest Repo
+
 - [`../_references/cerinte-profesor.txt`](../_references/cerinte-profesor.txt) - Cerințele originale
 - [`../_references/idee-originala.txt`](../_references/idee-originala.txt) - Idea inițială
 - [`../_references/exemple-studenti/`](../_references/exemple-studenti/) - Exemple anterioare
 
 ### External
+
 - [Lean Canvas Template](https://leanstack.com/lean-canvas)
 - [ANAF](https://www.anaf.ro) - Pentru info fiscală
 - [Eurostat](https://ec.europa.eu/eurostat) - Pentru statistici
@@ -167,7 +188,7 @@ Când ai terminat toate task-urile:
 
 ---
 
-##  FAQ
+## FAQ
 
 **Q: De unde încep exact?**
 A: [`tasks-checklist.md`](./tasks-checklist.md) → Task #1: Definire Echipă (15 min)
@@ -198,6 +219,7 @@ A: Nu obligatoriu. ChatGPT free, Claude free tier, Canva free tier sunt suficien
 ## [CONTACT] Ajutor & Support
 
 **Dacă rămâi blocat pe:**
+
 - **Un task specific**: Vezi prompt-ul AI sugerat în tasks-checklist
 - **Cum să folosești un tool**: Vezi ai-usage-log → Best Practices
 - **Ce să completezi**: Vezi comentariile din structure-and-sections
@@ -210,11 +232,13 @@ A: Nu obligatoriu. ChatGPT free, Claude free tier, Canva free tier sunt suficien
 Folosește asta pentru a verifica că ai făcut tot:
 
 ### Pregătire
+
 - [ ] Am citit acest README
 - [ ] Am citit tasks-checklist.md
 - [ ] Înțeleg workflow-ul
 
 ### Lucru
+
 - [ ] Definit echipa
 - [ ] Research competitori (+ documentat AI)
 - [ ] Design logo (+ documentat AI)
@@ -225,6 +249,7 @@ Folosește asta pentru a verifica că ai făcut tot:
 - [ ] Toate asset-urile în `assets/`
 
 ### Finalizare
+
 - [ ] Compilat tot în BUSINESS_FOUNDATION.md
 - [ ] Include secțiunea AI usage
 - [ ] Toate imaginile referențiate corect

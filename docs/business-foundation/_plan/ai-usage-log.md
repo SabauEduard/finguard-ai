@@ -18,6 +18,7 @@
 ## 1. Claude Code
 
 ### [NOTE] Descriere
+
 - **Tool**: Claude Code (Anthropic)
 - **Model**: Claude Sonnet 4.5
 - **Folosit pentru**: Generarea planului inițial Business Foundation
@@ -44,6 +45,7 @@ unde putem itera pe anumite idei - competitori, ce folosim pentru GANT, SWOT etc
 ```
 
 ### [EXPORT] Output Generat
+
 - `PLAN_BUSINESS_FOUNDATION.md` - Plan detaliat cu:
   - Structură completă document
   - Template SWOT
@@ -65,6 +67,7 @@ Si hai sa generam si un document in care trecem in lista tool-urile de AI folosi
 ```
 
 ### [EXPORT] Output Generat
+
 - Modificat `PLAN_BUSINESS_FOUNDATION.md`:
   - Adăugat marker-e **"[USER] COMPLETEAZĂ TU"** pentru task-uri specifice utilizatorului
   - Secțiuni marcate: Echipă, Research Competitori, SWOT prioritizare, Logo design, Gantt chart, Validare pricing
@@ -82,13 +85,14 @@ Hai sa facem o structura mai buna a documentelor existente, mi se par cam aleato
 ```
 
 ### [EXPORT] Output Generat
+
 - Organizare nouă cu folder-e:
   - `_plan/` - Documente de lucru (structure-and-sections.md, tasks-checklist.md, ai-usage-log.md, README.md)
   - `_references/` - Material original (idee-originala.txt, cerinte-profesor.txt, exemple-studenti/, README.md)
   - `assets/` - Fișiere vizuale (logo/, diagrams/, mockups/, README.md)
 - Creat README.md în fiecare folder cu documentație clară
 - Redenumit PLAN → structure-and-sections.md, TASKS_TODO → tasks-checklist.md, AI_TOOLS → ai-usage-log.md
-- Mutat PDF-uri exemple în _references/exemple-studenti/
+- Mutat PDF-uri exemple în \_references/exemple-studenti/
 
 ---
 
@@ -99,13 +103,14 @@ Poti scoate toate emojiurile din documente?
 ```
 
 ### [EXPORT] Output Generat
+
 - Creat script Python `/tmp/remove_emojis.py`:
   - Mapping ~30 emojis → text markers (📖 → [DOC], 📊 → [CHART], ✅ → [OK], etc.)
   - Procesare batch pentru toate .md files
 - Procesate 9 fișiere markdown:
   - README.md, BUSINESS_FOUNDATION.md, LEAN_CANVAS.md
-  - _plan/structure-and-sections.md, tasks-checklist.md, ai-usage-log.md, README.md
-  - _references/README.md, assets/README.md
+  - \_plan/structure-and-sections.md, tasks-checklist.md, ai-usage-log.md, README.md
+  - \_references/README.md, assets/README.md
 - Rezultat: Aspect mai formal/profesional, păstrând semantica
 
 ---
@@ -117,6 +122,7 @@ Poti transforma txt in md-uri?
 ```
 
 ### [EXPORT] Output Generat
+
 - Conversie `idee-originala.txt` → `idee-originala.md`:
   - Formatare markdown cu headers
   - Secțiuni separate pentru cei 2 agenți AI
@@ -133,6 +139,7 @@ Poti transforma txt in md-uri?
 ## 2. Gemini
 
 ### [NOTE] Descriere
+
 **Tool**: Gemini (Google)
 **Model**: Gemini 3 Fast si Nano Banana 2
 **Folosit pentru**: Generare logo, research competitori, estimări costuri
@@ -145,12 +152,14 @@ Poti genera un logo pt ce e in idee.tdt conform: idei: simbol AI + cont bancar/p
 ```
 
 ### [EXPORT] Output Generat
+
 ```
 /assets/logo/logo.png - Logo principal (transparent PNG, min 512x512px)
 /assets/logo/logo.svg - Logo vector (scalabil, pentru print) -> am folosit un tool de conversie PNG to SVG pentru a obține varianta vectorială
 ```
 
 ### [TARGET] Prompt Follow-up - Research Competitori
+
 ```
 Analizează competitorii: QuickBooks Self-Employed, FreshBooks, Wave Accounting,
 Smartbill, Oblio în piața de management financiar pentru freelanceri.
@@ -159,11 +168,14 @@ Pentru fiecare: top 5 funcționalități, pricing (RON sau USD), 3 avantaje,
 3 dezavantaje, suport legislație RO (DA/NU/Parțial).
 
 Format: Markdown pentru copy-paste.
-``` 
+```
+
 ### [EXPORT] Output Generat
-- Document markdown cu analiza competitorilor: _plan/_research/competitori.md
+
+- Document markdown cu analiza competitorilor: \_plan/\_research/competitori.md
 
 ### [TARGET] Prompt Follow-up - Statistici piata freelancing
+
 ```
 Care sunt cele mai recente statistici despre piața de freelancing în România (2025-2026)?
 Vreau: număr freelanceri înregistrați, venit mediu, domenii active, predicții creștere următorii 3 ani.
@@ -171,7 +183,8 @@ Citează sursele.
 ```
 
 ### [EXPORT] Output Generat
-- Document markdown cu statistici actualizate: _plan/_research/statistici_freelancing.md
+
+- Document markdown cu statistici actualizate: \_plan/\_research/statistici_freelancing.md
 
 ---
 
@@ -184,6 +197,7 @@ Pentru SWOT poti alege tu si pe baza datelor din competitori. [...]
 **Context**: User a cerut completarea SWOT analysis bazat pe research-ul deja efectuat despre competitori și statistici piață.
 
 ### [EXPORT] Output Generat
+
 - SWOT Analysis completat în `structure-and-sections.md` Secțiunea 4:
   - **Strengths**: 7 puncte + Top 3 prioritizate (AI nativ, Integrare ANAF+AI, Price/value ratio)
   - **Weaknesses**: 7 puncte + Top 3 riscuri critice cu mitigation plans
@@ -204,6 +218,7 @@ Pentru SWOT poti alege tu si pe baza datelor din competitori. [...]
 **Context**: User a cerut diagrama Gantt generată în format Mermaid pentru vizualizare.
 
 ### [EXPORT] Output Generat
+
 - Diagrama Gantt Mermaid generată în `structure-and-sections.md` Secțiunea 8.3:
   - **Timeline**: 19 săptămâni (Apr-Aug 2026) până la Public Launch
   - **Milestones**: M0-M7 (Research → Launch → Post-launch)
@@ -231,20 +246,21 @@ La tehnologii, putem folosi orice tehnologie, deci sugereaza le pe cele care par
 **Context**: User a cerut choices concrete pentru stack tehnologic, eliminând toate opțiunile și alegând cele mai adecvate pentru scenariul bootstrapped 2026.
 
 ### [EXPORT] Output Generat
+
 - Stack Tehnologic finalizat în `structure-and-sections.md` Secțiunea 6:
-  - **Backend**: Python 3.12 + FastAPI 0.110 + Celery + SQLAlchemy 2.0
+  - **Backend**: TypeScript 6 + NestJS 11 + TypeORM + PostgreSQL 16
   - **AI Stack**: Claude 4.6 API (Sonnet primary, Opus complex, Haiku fast) + Claude Vision pentru OCR + OpenAI GPT-4o fallback
-  - **Database**: PostgreSQL 16 (Supabase/Neon managed) + Redis 7 (Upstash) + Qdrant vector DB
-  - **Storage**: Cloudflare R2 (zero egress fees, ~75% cheaper than S3)
-  - **Frontend**: Next.js 15 (App Router) + React 19 + TypeScript 5.4 + Tailwind CSS 4 + shadcn/ui
-  - **Hosting**: Railway pentru MVP backend (simplitate + cost predictibil) + Vercel pentru frontend
+  - **Database**: PostgreSQL 16 + Redis 7 + Qdrant vector DB
+  - **Storage**: Cloudflare R2
+  - **Frontend**: Next.js 16 (App Router) + React 19 + TypeScript 6 + Tailwind CSS 4 + shadcn/ui
+  - **Hosting**: Railway pentru MVP backend + Vercel pentru frontend
   - **CI/CD**: GitHub Actions + Docker
   - **Monitoring**: Sentry + PostHog + Better Stack
   - **Auth**: Clerk (OAuth 2.0, MFA built-in)
   - **Payments**: Stripe + Netopia Payments (RO cards)
 - Justificări detaliate pentru fiecare alegere (cost-eficiență, maturitate, AI-first)
 - Tabel costuri actualizat: **~2.300-4.000 RON/lună** pentru MVP (lean), **~4.500-7.000 RON/lună** la growth
-- Optimizări bootstrapped: Free tiers (Vercel, Clerk, PostHog), Railway vs AWS (saving $300-500/mo), R2 vs S3 (saving $100-200/mo)
+- Optimizări bootstrapped: shared tooling prin pnpm + Turborepo, provideri managed amânați până la validarea MVP, Claude Vision vs OCR separat
 
 ---
 
@@ -257,6 +273,7 @@ Actualizeaza tu acum, dar nu imi e clar unde punem informatiile cu platile angaj
 **Context**: User a cerut actualizarea Lean Canvas cu costurile noi din Tech Stack și clarificare unde apar salariile echipei în cele două scenarii (bootstrapped vs funded).
 
 ### [EXPORT] Output Generat
+
 - Lean Canvas actualizat în `LEAN_CANVAS.md`:
   - **Cost Structure** - Restructurat cu două scenarii CLAR separate:
     - **SCENARIUL ALES: BOOTSTRAPPED**
@@ -294,6 +311,7 @@ Actualizeaza tu acum, dar nu imi e clar unde punem informatiile cu platile angaj
     - Break-even: Luna 9-10 (improved from 10-11)
 
 **Cost savings identificate**:
+
 - ~60% reducere costuri vs estimate inițiale (~145k → ~130k/an)
 - Railway + Cloudflare R2 optimizations: saving ~$300-500/mo infrastructure
 
@@ -308,6 +326,7 @@ Completeaza tu tot (inclusiv ai usage) -> in documentul final de business founda
 **Context**: User a cerut compilarea finală a BUSINESS_FOUNDATION.md cu toate secțiunile din `structure-and-sections.md`, și ca documentația AI să fie document separat (nu în Business Foundation).
 
 ### [EXPORT] Output Generat
+
 - **BUSINESS_FOUNDATION.md** complet compilat:
   - **Secțiunea 1 (Motivație)**: Actualizată cu TAM 570k (450k PFA + 120k SRL)
   - **Secțiunea 3 (SWOT)**: Completă cu top 3 per categorie, mitigation plans
@@ -347,28 +366,28 @@ Completeaza tu tot (inclusiv ai usage) -> in documentul final de business founda
 
 ## [CHART] Sumar Utilizare AI
 
-| Tool | Secțiune Document | Prompt Type | Utilitate Principală |
-|------|-------------------|-------------|----------------------|
-| Claude Code | Plan complet | Generare structură | Scaffold inițial, template-uri, organizare folder structure |
-| Claude Code | Task planning | Iterare și organizare | Marcare TODO-uri, checklist prioritizat, documentație AI |
-| Claude Code | Restructurare | Refactoring documentație | Organizare logică folder-e (_plan, _references, assets) |
-| Claude Code | Formatare | Text processing | Eliminare emojis, conversie TXT→MD, standardizare format |
-| Gemini | Logo & Branding | Image generation | Logo design profesional cu AI (transparent PNG + SVG) |
-| Gemini | Market Research | Data gathering | Analiza competitorilor (5 players × funcționalități/pricing/avantaje) |
-| Gemini | Market Research | Data gathering | Statistici piață freelancing RO 2026 (TAM, venituri, creștere) |
-| Claude Code | SWOT Analysis | Strategic analysis | Completare SWOT bazat pe research (prioritizare top 3 per categorie) |
-| Claude Code | Project Planning | Gantt generation | Diagrama Gantt Mermaid (19 săpt, 7 milestones, dependencies) |
-| Claude Code | Tech Stack | Architecture design | Finalizare stack tehnologic (choices + justificări + costuri) |
-| Claude Code | Lean Canvas | Business modeling | Actualizare canvas cu costuri noi, TAM/SAM/SOM, scenarii salarii |
-| Claude Code | Document Assembly | Final compilation | Compilare BUSINESS_FOUNDATION.md complet (700 linii, toate secțiuni) |
-| Claude Code | PDF Optimization | LaTeX document generation | Conversie la LaTeX pentru formatare profesională (eliminare probleme pandoc) |
-| Claude Code | Visual Assets | HTML/CSS design + automation | Generare lean-canvas.html și swot-analysis.html (colorat, responsive, 1400×1644px) |
-| Claude Code | Image Processing | Full-page screenshot + cropping | Script Python screenshot_fullpage.py + smart crop algorithm (detectare spațiu alb) |
-| Claude Code | Content Enhancement | Strategic content writing | Îmbogățire secțiuni 1 & 2: impact financiar, cazuri utilizare, beneficii măsurabile, diferențiatori |
-| Claude Code | Project Organization | File management | Eliminare Markdown, păstrare doar LaTeX, organizare assets în assets/diagrams/ |
-| Claude Code | Documentation | AI usage logging | Documentare completă 17 prompturi + context + output per follow-up |
-| Claude Code | Quality Assurance | Requirements verification | VERIFICARE_CERINTE.md - checklist 100% coverage cerințe profesor |
-| Claude Code | Project Structure | Folder organization | Separare scripts/ (tooling) de assets/diagrams/ (outputs vizuale) |
+| Tool        | Secțiune Document    | Prompt Type                     | Utilitate Principală                                                                                |
+| ----------- | -------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Claude Code | Plan complet         | Generare structură              | Scaffold inițial, template-uri, organizare folder structure                                         |
+| Claude Code | Task planning        | Iterare și organizare           | Marcare TODO-uri, checklist prioritizat, documentație AI                                            |
+| Claude Code | Restructurare        | Refactoring documentație        | Organizare logică folder-e (\_plan, \_references, assets)                                           |
+| Claude Code | Formatare            | Text processing                 | Eliminare emojis, conversie TXT→MD, standardizare format                                            |
+| Gemini      | Logo & Branding      | Image generation                | Logo design profesional cu AI (transparent PNG + SVG)                                               |
+| Gemini      | Market Research      | Data gathering                  | Analiza competitorilor (5 players × funcționalități/pricing/avantaje)                               |
+| Gemini      | Market Research      | Data gathering                  | Statistici piață freelancing RO 2026 (TAM, venituri, creștere)                                      |
+| Claude Code | SWOT Analysis        | Strategic analysis              | Completare SWOT bazat pe research (prioritizare top 3 per categorie)                                |
+| Claude Code | Project Planning     | Gantt generation                | Diagrama Gantt Mermaid (19 săpt, 7 milestones, dependencies)                                        |
+| Claude Code | Tech Stack           | Architecture design             | Finalizare stack tehnologic (choices + justificări + costuri)                                       |
+| Claude Code | Lean Canvas          | Business modeling               | Actualizare canvas cu costuri noi, TAM/SAM/SOM, scenarii salarii                                    |
+| Claude Code | Document Assembly    | Final compilation               | Compilare BUSINESS_FOUNDATION.md complet (700 linii, toate secțiuni)                                |
+| Claude Code | PDF Optimization     | LaTeX document generation       | Conversie la LaTeX pentru formatare profesională (eliminare probleme pandoc)                        |
+| Claude Code | Visual Assets        | HTML/CSS design + automation    | Generare lean-canvas.html și swot-analysis.html (colorat, responsive, 1400×1644px)                  |
+| Claude Code | Image Processing     | Full-page screenshot + cropping | Script Python screenshot_fullpage.py + smart crop algorithm (detectare spațiu alb)                  |
+| Claude Code | Content Enhancement  | Strategic content writing       | Îmbogățire secțiuni 1 & 2: impact financiar, cazuri utilizare, beneficii măsurabile, diferențiatori |
+| Claude Code | Project Organization | File management                 | Eliminare Markdown, păstrare doar LaTeX, organizare assets în assets/diagrams/                      |
+| Claude Code | Documentation        | AI usage logging                | Documentare completă 17 prompturi + context + output per follow-up                                  |
+| Claude Code | Quality Assurance    | Requirements verification       | VERIFICARE_CERINTE.md - checklist 100% coverage cerințe profesor                                    |
+| Claude Code | Project Structure    | Folder organization             | Separare scripts/ (tooling) de assets/diagrams/ (outputs vizuale)                                   |
 
 ---
 
@@ -383,6 +402,7 @@ au niste coloane cam distantate intre ele. Lean Canvas ul in ASCII nu e o idee b
 **Context**: User a identificat probleme de formatare în PDF-ul generat cu pandoc (cuprins duplicat, tabele overflow, Lean Canvas ASCII depășește marginile).
 
 ### [EXPORT] Output Generat
+
 - **BUSINESS_FOUNDATION.tex** - Document LaTeX complet (800+ linii):
   - YAML frontmatter pentru metadata profesională
   - Eliminat flag `--toc` din pandoc (cuprins unic manual)
@@ -405,6 +425,7 @@ Lean Canvas-ul arata rau si documentul nu prea seamana cu ce e in Spontanous tra
 **Context**: User a cerut document mai compact și profesional, similar cu exemplul Spontaneous Traveller (care folosește format academic condensat).
 
 ### [EXPORT] Output Generat
+
 - **lean-canvas.html** (14 KB) - HTML vizual colorat pentru Lean Canvas:
   - Grid layout CSS (5 coloane × 3 rânduri) pentru cele 9 secțiuni Canvas
   - Gradient header (#667eea → #764ba2)
@@ -431,6 +452,7 @@ Din pacate imaginile nu contin tot tabelul in ambele cazuri (lean canvas si Swot
 **Context**: Chrome headless a făcut screenshot doar la viewport size (900px height), a tăiat conținut de jos.
 
 ### [EXPORT] Output Generat
+
 - **lean-canvas.png** (352 KB, 1400×1644px) - Screenshot full-page cu smart crop:
   - Generat cu Chrome headless `--window-size=1400,5000` (înălțime mare)
   - Python script detectare automată first/last content row
@@ -463,6 +485,7 @@ adauga informatii suplimentare in sectiunile 1 si 2?
 **Context**: User a observat spații albe mari după secțiunea "User Flow Tipic" (secțiunea 2), a cerut conținut adițional în secțiunile 1 (Motivație) și 2 (Rezumat).
 
 ### [EXPORT] Output Generat
+
 - **Secțiunea 1 (Motivație) - Adăugat**:
   - **Impactul financiar al problemei**: Calcule concrete pentru IT freelancer (350 EUR/lună timp pierdut, 500-2.000 RON/incident penalități, 1.000-3.000 RON/an deduceri neoptimizate, 3.600-6.000 RON/an cost contabil) → **Cost total: 5.000-10.000 RON/an**
   - **3 Cazuri de utilizare concrete**:
@@ -494,6 +517,7 @@ sa aranjezi si artefactele pentru lean canvas si swot cum trebuie (ar trebui ada
 **Context**: User a decis să păstreze doar LaTeX ca format principal, eliminând Markdown pentru Business Foundation, și să organizeze assets vizuale în locația corectă.
 
 ### [EXPORT] Output Generat
+
 - **Șterse fișiere Markdown**:
   - BUSINESS_FOUNDATION.md (700+ linii) - înlocuit complet de BUSINESS_FOUNDATION.tex
   - Păstrate doar LEAN_CANVAS.md și README.md pentru referință
@@ -505,7 +529,7 @@ sa aranjezi si artefactele pentru lean canvas si swot cum trebuie (ar trebui ada
 - **Structură finală**:
   - Root: BUSINESS_FOUNDATION.tex (sursă), BUSINESS_FOUNDATION.pdf (output)
   - assets/diagrams/: 3 PNG-uri finale + 2 HTML surse + README
-  - _plan/: Documente working (structure-and-sections.md, tasks-checklist.md, ai-usage-log.md)
+  - \_plan/: Documente working (structure-and-sections.md, tasks-checklist.md, ai-usage-log.md)
 
 ---
 
@@ -518,6 +542,7 @@ Sa documentezi toate prompt-urile si rezultatele in documentul de ai-usage ulter
 **Context**: User a cerut update complet la ai-usage-log.md cu toate prompturile din sesiunea curentă (Follow-up #10-#13).
 
 ### [EXPORT] Output Generat
+
 - **ai-usage-log.md** actualizat cu 4 follow-up-uri noi:
   - Follow-up #10: Regenerare PDF LaTeX (fix probleme formatare: cuprins duplicat, tabele overflow, Lean Canvas ASCII)
   - Follow-up #11: Generare lean-canvas.html și swot-analysis.html (grid layouts, gradients, responsive)
@@ -541,6 +566,7 @@ Verifica daca toate cerintele profesorului sunt acoperite acum.
 **Context**: User a cerut verificare sistematică că toate cerințele din brief-ul profesorului sunt îndeplinite 100%.
 
 ### [EXPORT] Output Generat
+
 - **VERIFICARE_CERINTE.md** (8.9 KB) - Checklist completă:
   - [SECTION] **1. Nume + Logo + Motto**: ✅ Pe title page
   - [SECTION] **2. Motivație (~½ pagină)**: ✅ ~2 pagini (îmbogățit cu impact financiar + cazuri concrete)
@@ -570,6 +596,7 @@ Curata si folderul de diagrams, poti muta scripts in /scripts sau separa le cum 
 **Context**: User a cerut organizare finală a assets/diagrams/, separând scripturile de generare de asset-urile vizuale finale.
 
 ### [EXPORT] Output Generat
+
 - **Creat folder scripts/** la rădăcină business-foundation/:
   - Mutat screenshot_fullpage.py (4.9K) - script principal recomandat
   - Mutat generate_images.py (4.9K) - alternativă Selenium
@@ -596,6 +623,7 @@ Poti verifica de greseli gramaticale si phrasing gresit?
 **Context**: User a cerut verificare completă pentru erori gramaticale și formulări necorecte în README-uri și document principal.
 
 ### [EXPORT] Output Generat
+
 - **README principal** (finguard-ai/README.md) - 58 corectări:
   - "Categorisire cheltuieli" → "Categorizarea cheltuielilor"
   - "Calculare impozite" → "Calcularea impozitelor"
@@ -623,6 +651,7 @@ $70-160 RON (tot din SWOT) si prezent is la $90-280 RON
 **Context**: User a identificat 2 probleme în SWOT Analysis HTML: simbolul $ înaintea prețurilor în RON și expresia "TREBUIE" cu caps lock.
 
 ### [EXPORT] Output Generat
+
 - **swot-analysis.html** actualizat:
   - "$70-160 RON" → "~70-160 RON" (simbolul ~ pentru aproximare)
   - "$90-280 RON" → "~90-280 RON"
@@ -646,6 +675,7 @@ putem face update?
 **Context**: User a identificat că rolurile echipei nu sunt realiste - toți sunt studenți IT fără experiență marketing reală.
 
 ### [EXPORT] Output Generat
+
 - **BUSINESS_FOUNDATION.tex** - Secțiunea 7.1 Echipa actualizată:
   - **Sabău Eduard**: Tech Lead & Backend (adăugat "coordonare echipă")
   - **Maftei Valentin**: Backend Engineer (adăugat "integrări banking")
@@ -671,6 +701,7 @@ Inca o greseala pe care am observat o: NU integrare ANAF
 **Context**: Expresia "NU integrare ANAF" suna nenatural în textul descriptiv al competitorilor.
 
 ### [EXPORT] Output Generat
+
 - **BUSINESS_FOUNDATION.tex** - Secțiunea 4.2 Market Analysis:
   - QuickBooks: "NU integrare ANAF" → "fără integrare ANAF"
   - FreshBooks: "NU integrare ANAF" → "fără integrare ANAF"
@@ -691,6 +722,7 @@ Poti face logoul mai mare pe prima pagina
 **Context**: User a cerut logo mai vizibil pe title page.
 
 ### [EXPORT] Output Generat
+
 - **BUSINESS_FOUNDATION.tex** - Title page modificată:
   - Logo dimensiune: 0.3\textwidth → **0.5\textwidth** (creștere 67%)
   - Spacing optimizat: 3cm → 1.5cm între "Management de Produs" și "Business Foundation"
@@ -703,7 +735,7 @@ Poti face logoul mai mare pe prima pagina
 **Total output pages**: ~50+ pagini documentație (BUSINESS_FOUNDATION.pdf 15 pagini + ai-usage-log 17+ pagini)
 **Artefacte generate**: 10+ fișiere (lean-canvas, swot-analysis, gantt, BUSINESS_FOUNDATION.tex, VERIFICARE_CERINTE.md, scripts/, README-uri actualizate)
 **Corectări finale**: 58+ erori gramaticale, 7 inconsistențe prețuri/expresii, roluri echipă realiste, logo optimizat
-**Cost savings identificate**: ~60% reducere costuri infrastructure prin AI-assisted tech choices (Railway vs AWS, R2 vs S3)
+**Cost savings identificate**: reducere a overhead-ului operațional prin monorepo pnpm + Turborepo și amânarea serviciilor managed până la validarea MVP
 **Efficiency gains**: Document Business Foundation complet în ~8-10 ore vs ~30-40 ore manual tradițional (incluzând iterații formatare LaTeX, generare vizualizări, verificare cerințe, multiple runde de corectare)
 
 ---
@@ -716,6 +748,7 @@ Când folosești un nou tool AI, adaugă aici:
 ## [NUME TOOL]
 
 ### [NOTE] Descriere
+
 **Tool**: [Nume complet]
 **Model**: [Dacă aplicabil - ex: GPT-4, Claude Opus, etc.]
 **Folosit pentru**: [Scop specific]
@@ -725,13 +758,9 @@ Când folosești un nou tool AI, adaugă aici:
 
 [PASTE AICI PROMPTUL EXACT]
 
-
 ### [EXPORT] Output Generat
 
-
 [DESCRIERE OUTPUT SAU LINK CĂTRE FIȘIER]
-
 ```
 
 **Nota finală**: Acest document trebuie actualizat pe măsură ce folosești tool-uri AI noi în dezvoltarea Business Foundation-ului. Este parte integrantă din documentația proiectului și demonstrează utilizarea eficientă a AI-ului în procesul de dezvoltare.
-

@@ -257,19 +257,16 @@ pentru scenariul bootstrapped 2026.</p>
 <li>Stack Tehnologic finalizat în <code>structure-and-sections.md</code>
 Secțiunea 6:
 <ul>
-<li><strong>Backend</strong>: Python 3.12 + FastAPI 0.110 + Celery +
-SQLAlchemy 2.0</li>
+<li><strong>Backend</strong>: TypeScript 6 + NestJS 11 + TypeORM +
+PostgreSQL 16</li>
 <li><strong>AI Stack</strong>: Claude 4.6 API (Sonnet primary, Opus
 complex, Haiku fast) + Claude Vision pentru OCR + OpenAI GPT-4o
 fallback</li>
-<li><strong>Database</strong>: PostgreSQL 16 (Supabase/Neon managed) +
-Redis 7 (Upstash) + Qdrant vector DB</li>
-<li><strong>Storage</strong>: Cloudflare R2 (zero egress fees, ~75%
-cheaper than S3)</li>
-<li><strong>Frontend</strong>: Next.js 15 (App Router) + React 19 +
-TypeScript 5.4 + Tailwind CSS 4 + shadcn/ui</li>
-<li><strong>Hosting</strong>: Railway pentru MVP backend (simplitate +
-cost predictibil) + Vercel pentru frontend</li>
+<li><strong>Database</strong>: PostgreSQL 16 + Redis 7 + Qdrant vector DB</li>
+<li><strong>Storage</strong>: Cloudflare R2</li>
+<li><strong>Frontend</strong>: Next.js 16 (App Router) + React 19 +
+TypeScript 6 + Tailwind CSS 4 + shadcn/ui</li>
+<li><strong>Hosting</strong>: Railway pentru MVP backend + Vercel pentru frontend</li>
 <li><strong>CI/CD</strong>: GitHub Actions + Docker</li>
 <li><strong>Monitoring</strong>: Sentry + PostHog + Better Stack</li>
 <li><strong>Auth</strong>: Clerk (OAuth 2.0, MFA built-in)</li>
@@ -279,8 +276,8 @@ cost predictibil) + Vercel pentru frontend</li>
 maturitate, AI-first)</li>
 <li>Tabel costuri actualizat: <strong>~2.300-4.000 RON/lună</strong>
 pentru MVP (lean), <strong>~4.500-7.000 RON/lună</strong> la growth</li>
-<li>Optimizări bootstrapped: Free tiers (Vercel, Clerk, PostHog),
-Railway vs AWS (saving $300-500/mo), R2 vs S3 (saving $100-200/mo)</li>
+<li>Optimizări bootstrapped: shared tooling prin pnpm + Turborepo,
+provideri managed amânați până la validarea MVP, Claude Vision vs OCR separat</li>
 </ul>
 <hr />
 <h3 id="target-prompt-follow-up-8---actualizare-lean-canvas">[TARGET]
@@ -519,8 +516,8 @@ secțiuni)</td>
 </table>
 <p><strong>Total utilizări AI</strong>: 12 prompts majore <strong>Total
 output pages</strong>: ~40+ pagini documentație generată/compilată
-<strong>Cost savings identificate</strong>: ~60% reducere costuri
-infrastructure prin AI-assisted tech choices (Railway vs AWS, R2 vs S3)
+<strong>Cost savings identificate</strong>: reducere a overhead-ului
+operațional prin monorepo pnpm + Turborepo și amânarea serviciilor managed până la validarea MVP
 <strong>Efficiency gains</strong>: Document Business Foundation complet
 în ~6 ore vs ~20-30 ore manual tradițional</p>
 <hr />
