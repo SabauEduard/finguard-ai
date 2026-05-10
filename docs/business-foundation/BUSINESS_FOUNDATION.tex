@@ -89,7 +89,7 @@
 \end{titlepage}
 
 % Table of contents
-\tableofcontents
+{\small\tableofcontents}
 \newpage
 
 % Content
@@ -305,13 +305,13 @@ Preț/lună (RON) & \textbf{49-199} & 25-75 & 15-21 & 70-160 & 90-280 & \textbf{
 
 \subsection{Tehnologii Folosite}
 
-\textbf{Backend/AI Engine:} TypeScript 6 intr-un monorepo pnpm/Turborepo, NestJS 11 pentru API, TypeORM pentru stratul de persistenta si PostgreSQL 16 pentru datele tranzactionale. Anthropic Claude 4.6 API (Sonnet/Opus/Haiku), Claude Vision API (OCR), OpenAI GPT-4o (fallback), Redis 7 si Qdrant raman componentele principale ale stratului AI si de procesare asincronă.
+\textbf{Backend/AI Engine:} NestJS 11 pentru API, Google Cloud Firestore pentru persistența datelor si procesarea documentelor financiare. Anthropic Claude 4.6 API (Sonnet/Opus/Haiku), Gemini 3 Flash Preview, OpenAI GPT-4o (fallback) raman componentele principale ale stratului AI si de procesare asincronă.
 
-\textbf{Frontend:} Next.js 16 (App Router) + React 19, TypeScript 6, Tailwind CSS 4, shadcn/ui, Vercel hosting, Flutter (mobile v2.0+).
+\textbf{Frontend:} React 19/Vite, TypeScript 6, Tailwind CSS 4, shadcn/ui, Firebase hosting.
 
 \textbf{DevOps:} Railway (MVP backend), GitHub Actions (CI/CD), Docker, Sentry (error tracking), PostHog (analytics), Better Stack (logging), Cloudflare R2 pentru storage.
 
-\textbf{Security:} Clerk (OAuth 2.0, MFA), GDPR Compliance (data residency EU), encryption (TLS 1.3 transit, AES-256 at rest).
+\textbf{Security:} Firebase Authentication (OAuth 2.0, Google Sign-In), GDPR Compliance (data residency EU), encryption (TLS 1.3 transit, AES-256 at rest).
 
 \textbf{Integrări:} ANAF e-Factura API (RO238), ANAF SPV API, Stripe + Netopia Payments, OpenBanking/PSD2 (post-v2).
 
