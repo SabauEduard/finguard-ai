@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "Invoice": {
+      "title": "Invoice",
+      "description": "An extracted invoice or expense document",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "The UID of the user who owns this invoice" },
+        "vendor": { "type": "string", "description": "Vendor name" },
+        "vendorCif": { "type": "string", "description": "Vendor CIF" },
+        "client": { "type": "string", "description": "Client name" },
+        "clientCif": { "type": "string", "description": "Client CIF" },
+        "type": { "type": "string", "enum": ["income", "expense"], "description": "Transaction type" },
+        "date": { "type": "string", "format": "date", "description": "Invoice date" },
+        "total": { "type": "number", "description": "Total amount" },
+        "currency": { "type": "string", "description": "Currency code" },
+        "tax": { "type": "number", "description": "Tax amount" },
+        "category": { "type": "string", "description": "Expense category" },
+        "deductionInsight": { "type": "string", "description": "Legal justification" },
+        "deductiblePercentage": { "type": "number", "description": "Deduction percentage" },
+        "isComplete": { "type": "boolean", "description": "Whether the scanning was complete" },
+        "imageUrl": { "type": "string", "description": "Base64 or URL of document" },
+        "fileType": { "type": "string", "description": "Mime type of document" },
+        "items": { 
+          "type": "array", 
+          "items": { "type": "string" },
+          "description": "Line items (if available)"
+        },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the record was created" }
+      },
+      "required": ["userId", "vendor", "total", "createdAt"]
+    },
+    "Report": {
+      "title": "Fiscal Report",
+      "description": "A generated fiscal report based on historical data",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "period": { "type": "string" },
+        "summary": { "type": "string" },
+        "totalIncome": { "type": "number" },
+        "totalExpenses": { "type": "number" },
+        "totalTax": { "type": "number" },
+        "incomeByCategory": { "type": "object" },
+        "expensesByCategory": { "type": "object" },
+        "riskScore": { "type": "number" },
+        "riskDescription": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "title", "period", "summary", "totalIncome", "totalExpenses", "totalTax", "incomeByCategory", "expensesByCategory", "riskScore", "riskDescription", "createdAt"]
+    },
+    "UserSettings": {
+      "title": "User Settings",
+      "description": "User preferences and security settings",
+      "type": "object",
+      "properties": {
+        "fiscal": { "type": "object" },
+        "notif": { "type": "object" },
+        "security": { 
+          "type": "object",
+          "properties": {
+            "twoFactorEnabled": { "type": "boolean" },
+            "twoFASecret": { "type": "string" }
+          }
+        },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "firestore": {
+    "/invoices/{invoiceId}": {
+      "schema": "Invoice",
+      "description": "Collection of user invoices"
+    },
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "Collection of generated fiscal reports"
+    },
+    "/users/{userId}": {
+      "schema": "UserSettings",
+      "description": "Individual user settings and security profile"
+    }
+  }
+}

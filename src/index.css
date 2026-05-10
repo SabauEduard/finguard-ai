@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-accent: #38bdf8;
+  --color-bg-deep: #0f172a;
+  
+  --animate-shake: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+
+  @keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-bg-deep text-slate-50 antialiased;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .mesh-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 10% 10%, #1e40af 0, transparent 50%),
+      radial-gradient(circle at 90% 10%, #7e22ce 0, transparent 50%),
+      radial-gradient(circle at 50% 90%, #db2777 0, transparent 50%),
+      radial-gradient(circle at 50% 50%, #0f172a 0, transparent 100%);
+    z-index: -1;
+  }
+
+  .glass-panel {
+    @apply border border-white/10 backdrop-blur-xl rounded-[2rem];
+    background: linear-gradient(
+      135deg, 
+      rgba(30, 64, 175, 0.1) 0%, 
+      rgba(126, 34, 206, 0.1) 50%, 
+      rgba(219, 39, 119, 0.1) 100%
+    );
+  }
+
+  .glass-card {
+    @apply border border-white/10 backdrop-blur-lg rounded-2xl;
+    background: linear-gradient(
+      135deg, 
+      rgba(30, 64, 175, 0.05) 0%, 
+      rgba(126, 34, 206, 0.05) 50%, 
+      rgba(219, 39, 119, 0.05) 100%
+    );
+  }
+}

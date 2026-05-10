@@ -61,3 +61,11 @@ pnpm-debug.log*
 # Misc
 .DS_Store
 *.pem
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
