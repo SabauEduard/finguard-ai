@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { db, auth, handleFirestoreError, OperationType } from './firebase';
 import { collection, addDoc, Timestamp, serverTimestamp } from 'firebase/firestore';
-import { getTaxAdvice } from '../services/geminiService';
+import { taxStrategyAgent } from '../services/geminiService';
 
 interface ReportContextType {
   isGenerating: boolean;
@@ -76,7 +76,7 @@ export function ReportProvider({ children }: { children: ReactNode }) {
         dividendTaxRate: 0.08
       };
 
-      const advice = await getTaxAdvice(userData, userProfile);
+      const advice = await taxStrategyAgent.generateStrategy(userData, userProfile);
       
       const reportData = {
         userId: auth.currentUser.uid,

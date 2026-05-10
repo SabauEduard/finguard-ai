@@ -18,7 +18,7 @@ import {
   ShieldAlert
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { scanDocument, ExtractedExpense } from '../services/geminiService';
+import { docScanAgent, ExtractedExpense } from '../services/geminiService';
 import { useUI } from '../lib/UIContext';
 import { cn } from '../lib/utils';
 import { db, auth, handleFirestoreError, OperationType } from '../lib/firebase';
@@ -99,7 +99,7 @@ export default function ExpenseAuditor() {
       }
 
       const base64Data = dataToScan.split(',')[1];
-      const data = await scanDocument(base64Data, settings.fiscal.cif, fileType || "image/jpeg");
+      const data = await docScanAgent.process(base64Data, settings.fiscal.cif, fileType || "image/jpeg");
       setResult(data);
     } catch (err) {
       console.error(err);
