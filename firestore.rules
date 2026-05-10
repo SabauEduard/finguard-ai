@@ -1,0 +1,116 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Phase 3: Primitives
+    function isSignedIn() { return request.auth != null; }
+    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+    function isValidId(id) { return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+
+    // Phase 4: Entity Validation
+    function isValidInvoice(data) {
+      return data.keys().hasAll(['userId', 'vendor', 'total', 'createdAt'])
+        && data.userId is string && data.userId.size() <= 128
+        && data.vendor is string && data.vendor.size() <= 200
+        && data.total is number 
+        && data.createdAt is timestamp
+        // Optional and Added fields
+        && (!('vendorCif' in data) || (data.vendorCif is string && data.vendorCif.size() <= 50))
+        && (!('client' in data) || (data.client is string && data.client.size() <= 200))
+        && (!('clientCif' in data) || (data.clientCif is string && data.clientCif.size() <= 50))
+        && (!('type' in data) || (data.type in ['income', 'expense']))
+        && (!('date' in data) || (data.date is string && data.date.size() <= 20))
+        && (!('tax' in data) || data.tax is number)
+        && (!('currency' in data) || (data.currency is string && data.currency.size() <= 10))
+        && (!('category' in data) || (data.category is string && data.category.size() <= 100))
+        && (!('deductionInsight' in data) || (data.deductionInsight is string && data.deductionInsight.size() <= 2000))
+        && (!('deductiblePercentage' in data) || data.deductiblePercentage is number)
+        && (!('isComplete' in data) || data.isComplete is bool)
+        && (!('imageUrl' in data) || (data.imageUrl is string && data.imageUrl.size() <= 1100000))
+        && (!('fileType' in data) || (data.fileType is string && data.fileType.size() <= 100))
+        && (!('items' in data) || (data.items is list && data.items.size() <= 50));
+    }
+
+    function isValidReport(data) {
+      return data.keys().hasAll(['userId', 'title', 'totalIncome', 'totalExpenses', 'createdAt', 'summary', 'period', 'totalTax', 'incomeByCategory', 'expensesByCategory', 'riskScore', 'riskDescription'])
+        && data.keys().size() == 12
+        && data.userId is string && data.userId.size() <= 128
+        && data.title is string && data.title.size() <= 200
+        && data.totalIncome is number
+        && data.totalExpenses is number
+        && data.totalTax is number
+        && data.summary is string && data.summary.size() <= 60000
+        && data.period is string && data.period.size() <= 100
+        && data.incomeByCategory is map
+        && data.expensesByCategory is map
+        && data.riskScore is number
+        && data.riskDescription is string && data.riskDescription.size() <= 1000
+        && data.createdAt is timestamp;
+    }
+
+    function isValidUserSettings(data) {
+      return (!('fiscal' in data) || data.fiscal is map)
+        && (!('notif' in data) || data.notif is map)
+        && (!('security' in data) || (
+          data.security is map 
+          && (!('twoFactorEnabled' in data.security) || data.security.twoFactorEnabled is bool)
+          && (!('twoFASecret' in data.security) || (data.security.twoFASecret is string && data.security.twoFASecret.size() <= 128))
+        ))
+        && (!('updatedAt' in data) || data.updatedAt is timestamp);
+    }
+
+    match /invoices/{invoiceId} {
+      allow get: if isOwner(existing().userId);
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      
+      allow create: if isSignedIn() 
+        && isValidId(invoiceId)
+        && incoming().userId == request.auth.uid
+        && incoming().createdAt == request.time
+        && isValidInvoice(incoming());
+
+      allow update: if isOwner(existing().userId)
+        && incoming().userId == existing().userId
+        && incoming().createdAt == existing().createdAt
+        && isValidInvoice(incoming())
+        && (
+          // Action: Edit details
+          incoming().diff(existing()).affectedKeys().hasOnly([
+            'vendor', 'vendorCif', 'client', 'clientCif', 'type', 'date', 
+            'total', 'tax', 'currency', 'category', 'deductionInsight', 
+            'deductiblePercentage', 'isComplete', 'items', 'imageUrl', 'fileType',
+            'updatedAt'
+          ])
+          && (!('updatedAt' in incoming()) || incoming().updatedAt == request.time)
+        );
+
+      allow delete: if isOwner(existing().userId);
+    }
+
+    match /reports/{reportId} {
+      allow get: if isOwner(existing().userId);
+      allow list: if isSignedIn() && resource.data.userId == request.auth.uid;
+      
+      allow create: if isSignedIn()
+        && isValidId(reportId)
+        && incoming().userId == request.auth.uid
+        && incoming().createdAt == request.time
+        && isValidReport(incoming());
+
+      allow update: if false; // Reports are immutable for audit purposes
+      allow delete: if isOwner(existing().userId);
+    }
+
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidId(userId) 
+        && isValidUserSettings(incoming());
+      allow update: if isOwner(userId) && isValidId(userId)
+        && isValidUserSettings(incoming())
+        && (!('updatedAt' in incoming()) || incoming().updatedAt == request.time);
+      allow delete: if false;
+    }
+  }
+}
